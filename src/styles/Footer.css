@@ -1,0 +1,165 @@
+#theFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--fill-accent-3),var(--fill-accent));
+    bottom: 0;
+    padding-top: 20px;
+}
+
+#footerInfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#footerSocialMedias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+}
+
+#footerLogo {
+    background: url("../assets/logo/BLUSH_LogoCream.avif") no-repeat center center;
+    background-size: cover;
+    height: 50px;
+    aspect-ratio: 455 / 67;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-social-link {
+    position: relative;
+}
+
+.footer-social-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #fffffe, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social-link:hover::after {
+    opacity: 1;
+}
+
+#footerContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footerInfoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding-left: 50px;
+    margin: 3px 0;
+}
+
+.footerInfo {
+    position: relative;
+    font: var(--font-style-body-small);
+    margin: 0;
+    color: #fffffe;
+    font-size: 18px;
+    line-height: 1.875em;
+    letter-spacing: 0em;
+    text-decoration: none;
+    text-align: right;
+}
+
+.footerInfo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #fffffe, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footerInfo:hover::after {
+    opacity: 1;
+}
+
+/* .footerInfoIcon {
+    height: 1em;
+    width: 1em;
+    vertical-align: left;
+    color: var(--text-color);
+}
+
+#footerLocation {
+    margin-left: -3px;
+    margin-right: 3px;
+} */
+
+#developerInfo {
+    color: #fffffe;
+    font-weight: 100;
+    font-size: 0.6em;
+}
+
+#devLink {
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    #footerInfoContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footerSocialMedias {
+        margin-bottom: 20px;
+    }
+
+    #footerContact {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    #developerInfo {
+        text-align: center;
+    }
+}

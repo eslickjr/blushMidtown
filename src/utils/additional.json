@@ -1,0 +1,33 @@
+[
+  {
+    "type": "Deep Conditioning Treatment",
+    "priceBottom": 25,
+    "priceTop": 30
+  },
+  {
+    "type": "Brow Wax & Tint",
+    "priceBottom": 30,
+    "priceTop": 30
+  },
+  {
+    "type": "Brow and Lip Wax",
+    "priceBottom": 30,
+    "priceTop": 30
+  },
+  {
+    "type": "Brow Wax",
+    "priceBottom": 15,
+    "priceTop": 15
+  },
+  {
+    "type": "Brow Tinting",
+    "priceBottom": 20,
+    "priceTop": 20
+  },
+  {
+    "type": "Fairy Hair Tinsel Extensions",
+    "priceBottom": 5,
+    "priceTop": 5,
+    "desc": "Want to add fun pops of color or glitter to your hair? Add Fairy Hair Tinsel Extensions to any hair service! They are $5 a bundle"
+  }
+]

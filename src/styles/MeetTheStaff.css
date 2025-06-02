@@ -1,0 +1,151 @@
+
+#meetTheStaff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+#meetTheStaffWelcomeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 60px 0;
+    background-color: var(--custom-6);
+}
+
+#meetTheStaffWelcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 883px;
+    background-color: var(--fill-background-primary);
+    padding: 20px 40px;
+}
+
+#meetTheStaffWelcomeHeader {
+    font: var(--font_0);
+    font-size: 56px;
+    color: var(--title);
+    padding: 0;
+    margin: 0;
+}
+
+#meetTheStaffWelcomeText {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
+#meetTheStaffContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#meetTheStaffContainerHeader {
+    font: var(--font-style-h5);
+    color: var(--fill-accent-4);
+    font-size: 50px;
+    letter-spacing: 0em;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.staffContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px 0;
+    width: 100vw;
+}
+
+.staffContainer:nth-child(odd) {
+    background-color: var(--fill-accent-3);
+}
+
+.staffImgCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.staffImg {
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
+.staffBtn {
+    font: var(--font-style-body-small);
+    color: var(--button-text-primary);
+    background-color: var(--fill-accent);
+    padding: 15px 20px;
+    text-decoration: none;
+    box-shadow: 1.93px 2.30px 8px 0px rgba(0, 0, 0, 0.45);
+    transition: background-color 0.3s ease;
+}
+
+.staffContainer:nth-child(odd) .staffBtn {
+    background-color: var(--fill-accent-4);
+}
+
+.staffBtn:hover {
+    background-color: rgba(195, 135, 135, 0.6);
+}
+
+.staffTextCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.staffName {
+    font: var(--font_0);
+    color: var(--fill-accent);
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 0em;
+}
+
+.staffContainer:nth-child(odd) .staffName {
+    color: var(--text-primary);
+}
+
+.staffText {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    font-size: 18px;
+    letter-spacing: 0em;
+    padding: 0;
+    margin: 0;
+    width: 460px;
+}
+
+.staffContainer:nth-child(odd) .staffText {
+    color: var(--custom-12);
+}
+
+.staffBold {
+    font: var(--font-style-body-medium);
+    color: var(--fill-accent-4);
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0em;
+}
+
+.staffContainer:nth-child(odd) .staffBold {
+    color: var(--text-secondary);
+}

@@ -1,0 +1,230 @@
+/* @keyframes expanding {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes collapsing {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+} */
+
+#theHeadContainer {
+    position: relative;
+    background-color: var(--fill-accent-3);
+    width: 100%;
+    z-index: 1000;
+}
+
+#navLogoLong {
+    width: 341.25px;
+    aspect-ratio: 455/67;
+    display: none;
+}
+
+#navLogoShort {
+    height: 50.25px;
+    aspect-ratio: 1/1;
+    display: none;
+}
+
+#navLogoLong.navLogoLong {
+    display: block;
+}
+
+#navLogoShort.navLogoShort {
+    display: block;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand-link:hover {
+    cursor: pointer;
+}
+
+.navbar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.navbar-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.navbar-item {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    padding: 0 10px;
+}
+
+.navbar-item:hover {
+    background-color: rgba(237, 233, 225, 0.41);
+    cursor: pointer;
+}
+
+.navbar-link {
+    font: normal normal 700 21px / 1.41em josefin-sans, 'josefin sans', sans-serif;
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: var(--text-primary);
+}
+
+.navbar-social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-social-link {
+    position: relative;
+}
+
+.navbar-social-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #fffffe, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-social-link:hover::after {
+    opacity: 1;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    /* .nav-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    } */
+
+    #navbar.navbar-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .navbar-brand {
+        background-color: var(--fill-accent-3);
+        padding: 20px;
+        z-index: 1001;
+        overflow: hidden;
+    }
+
+    .navbar-brand-link {
+        margin: 0;
+        width: 80%;
+        transform: translateX(0);
+        background-color: var(--fill-accent-3);
+        transition: transform 1s ease-in-out;
+        z-index: 1002;
+    }
+
+    .navbar-brand-link-expanded {
+        transform: translateX(40px);
+    }
+
+    #navLogoLong {
+        width: 100%;
+        margin: 0;
+    }
+
+    #navExpand {
+        /* display: none; */
+        width: 40px;
+        height: 40px;
+        margin: 0 0 0 20px;
+        fill: var(--fill-background-primary);
+        transform: translateX(0);
+        transition: transform 1s ease-in-out;
+    }
+
+    #navExpand.navExpandOpen {
+        transform: translateX(-40px);
+    }
+
+    #navCollapse {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px 0 0;
+        fill: var(--text-primary);
+        flex-shrink: 0;
+    }
+
+    .navbar-start-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-menu {
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: var(--fill-accent-3);
+        transition: transform 1s ease-in-out;
+    }
+
+    .navbar-menu-expanded {
+        transform: translateY(0);
+    }
+
+    .navbar-menu-collapsed {
+        transform: translateY(-100vh);
+    }
+}

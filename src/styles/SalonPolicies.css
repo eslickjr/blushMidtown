@@ -1,0 +1,61 @@
+.policySection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cancellationPolicy {
+    background-color: var(--fill-background-primary);
+    padding-bottom: 20px;
+}
+
+#adjustmentPolicy {
+    background-color: var(--fill-accent);
+    padding-bottom: 40px;
+}
+
+.policySection h1, .policySection p {
+    text-align: center;
+    width: 980px;
+}
+
+.policyHeader {
+    font: var(--font-style-h6);
+    font-size: 40px;
+}
+
+#cancellationPolicy .policyHeader {
+    color: var(--title);
+    margin: 20px;
+}
+
+#adjustmentPolicy .policyHeader {
+    color: var(--fill-base-1);
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+.policyText {
+    line-height: 1.875em;
+    font: var(--font-style-body-small);
+    font-size: 18px;
+    letter-spacing: 0em;
+    margin: 0 20px;
+}
+
+#cancellationPolicy .policyText {
+    color: var(--fill-base-shade-3);
+}
+
+#adjustmentPolicy .policyText {
+    color: var(--fill-base-1);
+}
+
+.policyText.policyBold, .policyText.policyMiniHeader {
+    font-weight: bold;
+}
+
+#cancelThankYou {
+    margin-top: 40px;
+}

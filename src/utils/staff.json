@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Courtney",
+        "src": "../assets/staff/Courtney.avif",
+        "stylist": true
+    },
+    {
+        "name": "Savannah",
+        "src": "../assets/staff/BigVan.avif",
+        "stylist": true
+    },
+    {
+        "name": "Jen",
+        "src": "../assets/staff/Jen.avif",
+        "stylist": true
+    },
+    {
+        "name": "Grace",
+        "src": "../assets/staff/Grace.avif",
+        "stylist": true
+    },
+    {
+        "name": "Rachel",
+        "src": "../assets/staff/Rachel.avif",
+        "stylist": true
+    },
+    {
+        "name": "Sydney",
+        "src": "../assets/staff/Sydney.avif",
+        "stylist": true
+    },
+    {
+        "name": "Katie",
+        "src": "../assets/staff/Katie.avif",
+        "stylist": false
+    }
+]
