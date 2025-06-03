@@ -209,7 +209,7 @@
     }
 
     .navbar-menu {
-        flex: 1;
+        /* flex: 1; */
         flex-direction: column;
         justify-content: flex-start;
         background-color: var(--fill-accent-3);
