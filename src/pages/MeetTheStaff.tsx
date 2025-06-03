@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 import "../styles/MeetTheStaff.css";
 
-import court from "../assets/staff/courtney.avif";
-import grace from "../assets/staff/grace.avif";
+import court from "../assets/staff/Courtney.avif";
+import grace from "../assets/staff/Grace.avif";
 import savannah from "../assets/staff/BigVan.avif";
-import sydney from "../assets/staff/sydney.avif";
-import rachel from "../assets/staff/rachel.avif";
-import jen from "../assets/staff/jen.avif";
-import katie from "../assets/staff/katie.avif";
+import sydney from "../assets/staff/Sydney.avif";
+import rachel from "../assets/staff/Rachel.avif";
+import jen from "../assets/staff/Jen.avif";
+import katie from "../assets/staff/Katie.avif";
 
 export default function MeetTheStaff() {
     return (
