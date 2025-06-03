@@ -26,7 +26,7 @@ function App() {
     setLoaded(false);
     setTimeout(() => {
       setLoadOut(false);
-    }, 500); // Adjust the timeout duration as needed
+    }, 250); // Adjust the timeout duration as needed
   }
 
   return (

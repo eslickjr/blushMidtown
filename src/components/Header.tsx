@@ -10,7 +10,6 @@ export default function Header(bloomOut: { bloomOut: () => void }) {
   const [mobile, setMobile] = useState(window.innerWidth <= window.innerHeight);
   const [logoStyle, setLogoStyle] = useState(window.innerWidth >= 1511 ? "navLogoLong" : "navLogoShort");
   const [navExpanded, setNavExpanded] = useState(false);
-  const [navAnimation, setNavAnimation] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
@@ -57,35 +56,35 @@ export default function Header(bloomOut: { bloomOut: () => void }) {
               <img id="navLogoLong" className={!mobile ? logoStyle : "navLogoLong"} src={blushLogo} alt="Logo" />
               <img id="navLogoShort" className={!mobile ? logoStyle : ""} src={blushShort} alt="Logo" />
             </div>
-            {mobile && <svg id="navExpand" className={navExpanded ? "navExpandOpen" : ""} onClick={() => setNavExpanded(true)} xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            {mobile && <svg id="navExpand" className={navExpanded ? "navExpandOpen" : ""} onClick={() => {setNavExpanded(true); document.body.style.overflowY="hidden";}} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg>}
           </div>
 
           <div className={`navbar-menu ${navExpanded ? "navbar-menu-expanded" : "navbar-menu-collapsed"}`}>
             <ul className={`navbar-start ${mobile ? "navbar-start-mobile" : ""} `}>
-              <li className="navbar-item">
-                <div className="navbar-link" onClick={() => {/*</li>setNavExpanded(false);*/ reRoute("/");}}>Home</div>
+              <li className="navbar-item" onClick={() => {/*</li>setNavExpanded(false);*/ reRoute("/");}}>
+                <div className="navbar-link">Home</div>
               </li>
-              <li className="navbar-item">
-                <div className="navbar-link" onClick={() => reRoute("/ServiceMenu")}>Service Menu</div>
+              <li className="navbar-item" onClick={() => reRoute("/ServiceMenu")}>
+                <div className="navbar-link">Service Menu</div>
               </li>
-              <li className="navbar-item">
-                <div className="navbar-link" onClick={() => reRoute("/MeetTheStaff")}>Meet the Staff</div>
+              <li className="navbar-item" onClick={() => reRoute("/MeetTheStaff")}>
+                <div className="navbar-link">Meet the Staff</div>
               </li>
-              <li className="navbar-item">
-                <div className="navbar-link" onClick={() => reRoute("/PhotoGallery")}>Photo Gallery</div>
+              <li className="navbar-item" onClick={() => reRoute("/PhotoGallery")}>
+                <div className="navbar-link">Photo Gallery</div>
               </li>
-              <li className="navbar-item">
-                <div className="navbar-link" onClick={() => reRoute("/BookOnline")}>Book Online</div>
+              <li className="navbar-item" onClick={() => reRoute("/BookOnline")}>
+                <div className="navbar-link">Book Online</div>
               </li>
-              <li className="navbar-item">
-                <div className="navbar-link" onClick={() => reRoute("/WorkWithUs")}>Work with Us</div>
+              <li className="navbar-item" onClick={() => reRoute("/WorkWithUs")}>
+                <div className="navbar-link">Work with Us</div>
               </li>
-              <li className="navbar-item">
-                <div className="navbar-link" onClick={() => reRoute("/SalonPolicies")}>Salon Policies</div>
+              <li className="navbar-item" onClick={() => reRoute("/SalonPolicies")}>
+                <div className="navbar-link">Salon Policies</div>
               </li>
-              {mobile && <svg id="navCollapse" onClick={() => setNavExpanded(false)} xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              {mobile && <svg id="navCollapse" onClick={() => {setNavExpanded(false); document.body.style.overflowY = "";}} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>}
             </ul>

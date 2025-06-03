@@ -1,0 +1,247 @@
+.calendar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.immediateAvailability {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    background-color: var(--fill-accent-4);
+}
+
+.availabilityToday, .availabilityTomorrow {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    width: 50%;
+    margin: 0 auto;
+    padding: 0 100px 20px 100px;
+}
+
+/* .availabilityToday {
+    border-right: 1px solid var(--fill-base-1);
+} */
+
+#availabilityBack {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    font: var(--font-style-body-medium);
+    display: flex;
+    margin: 15px auto;
+    background-color: var(--button-fill-secondary);
+    border: none;
+    color: var(--button-text-secondary);
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#availabilityBack:hover {
+    background-color: var(--button-fill-secondary-hover);
+    color: var(--button-text-secondary-hover);
+}
+
+#availabilityHeader {
+    font: var(--font-style-h4);
+    color: var(--fill-base-1);
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 52px;
+}
+
+.availabilityTitle {
+    font: var(--font-style-body-large);
+    color: var(--fill-accent);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.availabilityContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 0.5;
+    overflow-y: auto;
+}
+
+.availabilitySlot {
+    font: var(--font-style-body-small);
+    color: var(--button-text-secondary);
+    background-color: var(--button-fill-secondary);
+    /* border-radius: 10px; */
+    padding: 10px;
+    margin: 1px;
+    width: 90%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.availabilitySlot:hover {
+    background-color: var(--button-fill-secondary-hover);
+}
+
+.availabilityTime {
+    font: var(--font-style-body-small);
+    color: var(--button-text-secondary);
+    text-align: left;
+    font-size: 18px;
+    margin: 17px 0;
+}
+
+#noAvailability {
+    margin-bottom: 0;
+}
+
+#selectAnother {
+    margin-top: 0;
+}
+
+.noAvailabilityTime {
+    font: var(--font-style-body-small);
+    color: var(--text-base-2);
+    text-align: center;
+    font-size: 18px;
+    margin: 17px 0;
+}
+
+.availabilitySlot:hover .availabilityTime {
+    color: var(--button-text-secondary-hover);
+}
+
+.calendar {
+  /* width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* background-color: var(--fill-accent-4); */
+  padding: 0 20px 20px 20px;
+}
+
+.calendarTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.calendarMonth {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    font-size: 50px;
+    margin: 0;
+}
+
+.greyDecreaseMonth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: var(--font-style-body-small);
+    color: rgba(66, 66, 60, 0.6);
+    font-size: 32px;
+    padding: 0px 20px;
+    border: none;
+    cursor: default;
+}
+
+.decreaseMonth, .increaseMonth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 32px;
+    border: none;
+    padding: 0px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.decreaseMonth:hover, .increaseMonth:hover {
+    background-color: var(--fill-background-secondary);
+}
+
+.calendarTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.calendarCell, .calendarHeadCell {
+    background-color: var(--fill-accent-3);
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.calendarCurDay {
+    border: 2px solid var(--fill-base-2);
+}
+
+.calendarSelectDay {
+    background-color: var(--fill-background-secondary);
+}
+
+.calendarCurMonth:hover, .calendarCurDay:hover {
+    background-color: rgba(206, 165, 161, 0.6);
+    cursor: pointer;
+}
+
+.calendarSelectDay:hover {
+    background-color: var(--fill-background-secondary);
+    cursor: default;
+}
+
+.calendarPrevMonth, .calendarNextMonth {
+    background-color: var(--fill-background-primary);
+}
+
+.calendarPrevDay {
+    background-color: var(--fill-background-primary);
+}
+
+.cellWrapper {
+    aspect-ratio: 1/.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.calendarDay, .calendarDayName {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+}
+
+.calendarCurDay .calendarDay, .calendarCurDay .calendarDayName {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.calendarPrevMonth .calendarDay, .calendarPrevMonth .calendarDayName, .calendarNextMonth .calendarDay {
+    color: rgba(111, 109, 104, 0.6);
+}
+
+.calendarPrevDay .calendarDay, .calendarPrevDay .calendarDayName {
+    color: rgba(111, 109, 104, 0.6);
+}
+
+/* .calendarHeadCell:nth-child(1) {
+    border-top-left-radius: 10px;
+} */

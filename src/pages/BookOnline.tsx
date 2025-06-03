@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "../styles/BookOnline.css";
 
@@ -13,21 +13,52 @@ const staffImages = (import.meta as any).glob("../assets/staff/*.avif", { eager:
 import eventData from "../utils/events.json";
 import staffData from "../utils/staff.json";
 import guestAppointments from "../utils/guest.json";
-import additionalServices from "../utils/additional.json";
+// import additionalServices from "../utils/additional.json";
 import serviceTypes from "../utils/serviceTypes.json";
 
-export default function BookOnline() {
-    const [signedIn, setSignedIn] = useState("");
-    const [firstTime, setFirstTime] = useState(true);
-    const [bookType, setBookType] = useState("");
-    const [serviceTypeId, setServiceTypeId] = useState(-1);
-    const [serviceId, setServiceId] = useState(-1);
-    const [stylistId, setStylistId] = useState(-1);
+import Calendar from "../components/Calendar";
+import Checkout from "../components/Checkout";
 
-    const stylistsData = staffData
+import Basket, { Service, AddService, Stylist } from "../types/basket";
+
+export default function BookOnline() {
+    const [signedIn, setSignedIn] = useState<string>("");
+    const [firstTime, setFirstTime] = useState<boolean>(true);
+    const [bookType, setBookType] = useState<string>("");
+    const [serviceTypeId, setServiceTypeId] = useState<number>(-1);
+    const [addService, setAddService] = useState<AddService[]>([]);
+    const defaultService={ name: "", type: "", price: -1}
+    const [service, setService] = useState<Service>(defaultService);
+    const defaultStylist: Stylist = { name: "", src: "" };
+    const [stylist, setStylist] = useState<Stylist>(defaultStylist);
+    const [basket, setBasket] = useState<Basket>({
+        service: service,
+        addServices: [],
+        stylist: stylist,
+        date: undefined,
+        timeEnd: undefined,
+        note: "",
+    });
+    const [serviceDate, setServiceDate] = useState<Date | undefined>();
+
+    console.log("setAddService", setAddService);
+
+    useEffect(() => {
+        setBasket({
+            service: service,
+            addServices: addService,
+            stylist: stylist,
+            date: serviceDate,
+            timeEnd: "11:00",
+            note: "",
+        });
+    }
+    , [serviceTypeId, service, stylist, serviceDate]);
+
+
+    const stylistsData: Stylist[] = staffData
         .filter(staff => staff.stylist)
         .map(staff => {
-            if (!staff.stylist) return null;
             return {
                 name: staff.name,
                 src: staffImages[staff.src]?.default ?? ""
@@ -38,12 +69,12 @@ export default function BookOnline() {
         return (
             <ul id="bookOnlineStylistList">
                 {stylistsData.map((stylist, index) => (
-                    <li className="bookOnlineStylistItem" key={index} onClick={() => {setStylistId(index)}}>
+                    <li className="bookOnlineStylistItem" key={index} onClick={() => {setStylist(stylistsData[index])}}>
                         <div className="bookOnlineStylistImageCon">
-                            <img className="bookOnlineStylistImage" src={stylist?.src} alt={stylist?.name} />
+                            <img className="bookOnlineStylistImage" src={stylist.src} alt={stylist.name} />
                             <div className="bookOnlineStylistImageOverlay" />
                         </div>
-                        <h2 className="bookOnlineStylistHeader">{stylist?.name}</h2>
+                        <h2 className="bookOnlineStylistHeader">{stylist.name}</h2>
                     </li>
                 ))}
             </ul>
@@ -66,7 +97,14 @@ export default function BookOnline() {
         return (
             <ul id="bookOnlineServiceList">
                 {serviceTypes[serviceTypeId].services.map((service, index) => (
-                    <li className="bookOnlineServiceItem" key={index} onClick={() => {setServiceId(index)}}>
+                    <li className="bookOnlineServiceItem" key={index} onClick={() => {
+                        const selected = serviceTypes[serviceTypeId];
+                        setService({
+                            name: selected.name,
+                            type: selected.services[index].type,
+                            price: selected.services[index].priceBottom
+                        });
+                    }}>
                         <h3 className="bookOnlineServiceItemHeader">{service.type}</h3>
                         <p className="bookOnlineServiceItemPrice">Price: ${service.priceBottom < service.priceTop ? `${service.priceBottom} - $${service.priceTop}` : service.priceTop}</p>
                         {"desc" in service && service.desc && <p className="bookOnlineServiceItemDesc">{service.desc}</p>}
@@ -150,19 +188,27 @@ export default function BookOnline() {
                                     {serviceTypeList()}
                                 </div>
                             ) : (
-                                serviceId !== -1 ? (
-                                    <div id="bookOnlineServicesStylist" className="bookOnlineServicesContainer">
-                                        <h2 id="bookOnlineServicesStylistBack" className="bookOnlineServicesBack" onClick={() => setServiceId(-1)}>Back</h2>
-                                        <h2 id="bookOnlineServicesStylistHeader" className="bookOnlineServicesHeader">Select a Stylist</h2>
-                                        {stylistList()}
-                                        <div className="bookOnlineStylistItem" key={stylistsData.length} onClick={() => {Math.floor(Math.random() * stylistsData.length)}}>
-                                            <div className="bookOnlineStylistImageCon">
-                                                <div id="bookOnlineRandomStylist" className="bookOnlineStylistImage">?</div>
-                                                <div className="bookOnlineStylistImageOverlay" />
+                                service.name ? (
+                                    !stylist.name ? (
+                                        <div id="bookOnlineServicesStylist" className="bookOnlineServicesContainer">
+                                            <h2 id="bookOnlineServicesStylistBack" className="bookOnlineServicesBack" onClick={() => setService(defaultService)}>Back</h2>
+                                            <h2 id="bookOnlineServicesStylistHeader" className="bookOnlineServicesHeader">Select a Stylist</h2>
+                                            {stylistList()}
+                                            <div className="bookOnlineStylistItem" key={stylistsData.length} onClick={() => {setStylist(stylistsData[Math.floor(Math.random() * stylistsData.length)])}}>
+                                                <div className="bookOnlineStylistImageCon">
+                                                    <div id="bookOnlineRandomStylist" className="bookOnlineStylistImage">?</div>
+                                                    <div className="bookOnlineStylistImageOverlay" />
+                                                </div>
+                                                <h2 className="bookOnlineStylistHeader">Random</h2>
                                             </div>
-                                            <h2 className="bookOnlineStylistHeader">Random</h2>
                                         </div>
-                                    </div>
+                                    ) : (
+                                        serviceDate === undefined ? (
+                                            <Calendar setStylist={setStylist} setServiceDate={setServiceDate} stylistName={stylist.name} defaultStylist={defaultStylist}/>
+                                        ) : (
+                                            <Checkout setServiceDate={setServiceDate} basket={basket}  />
+                                        )
+                                    )
                                 ) : (
                                     <div id="bookOnlineServicesService" className="bookOnlineServicesContainer">
                                         <h2 id="bookOnlineServicesServiceBack" className="bookOnlineServicesBack" onClick={() => setServiceTypeId(-1)}>Back</h2>

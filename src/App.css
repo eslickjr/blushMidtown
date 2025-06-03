@@ -174,11 +174,11 @@ h2, h3, h4 {
 }
 
 .loading-screen.hidden {
-    animation: bloom-in 0.5s forwards;
+    animation: bloom-in 0.25s forwards;
 }
 
 .loading-screen.changeScreen {
-    animation: bloom-out 0.5s forwards;
+    animation: bloom-out 0.25s forwards;
 }
 
 .mx-3 {

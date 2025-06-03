@@ -206,20 +206,18 @@
     text-align: center;
     margin: 10px;
     padding: 20px;
-    width: calc((100vw - 160px) / 3);
+    width: calc((100vw - 160px) / 4);
     aspect-ratio: 1/1;
     background-color: var(--fill-background-primary);
-    border-radius: 8px;
+    border-radius: 100px;
     box-shadow: 1.93px 2.30px 8px 0px rgba(0, 0, 0, 0.45);
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.bookOnlineServiceTypeItem {
-    width: calc((100vw - 160px) / 4);
-}
-
-.bookOnlineServiceTypeItem:hover, .bookOnlineServiceItem:hover {
-    background-color: rgba(244, 239, 235, 0.6);
+.bookOnlineServiceTypeItem:hover, .bookOnlineServiceItem:hover, .bookOnlineEventItem:hover {
+    /* background-color: rgba(244, 239, 235, 0.4); */
+    background-color: var(--fill-background-secondary);
 }
 
 .bookOnlineServiceTypeHeader, .bookOnlineEvenItemHeader, .bookOnlineGuestItemHeader {
