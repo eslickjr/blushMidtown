@@ -90,7 +90,7 @@
     object-fit: cover;
 }
 
-#checkoutService {
+#checkoutService, .checkoutAddService {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -100,13 +100,18 @@
     padding: 20px;
 }
 
-#checkoutServiceName {
+.checkoutAddService {
+    border-top: none;
+}
+
+#checkoutServiceName, .checkoutAddServiceName {
     font: var(--font-style-body-medium);
     color: var(--text-primary);
     text-align: left;
     font-size: 18px;
     padding: 0;
     margin: 0;
+    width: 45%; /* Adjusted for stylist image width */
 }
 
 .checkoutServiceType, .checkoutServicePrice {
@@ -116,6 +121,12 @@
     font-size: 18px;
     padding: 0;
     margin: 0;
+    width: 45%; /* Adjusted for stylist image width */
+}
+
+.checkoutServicePrice {
+    width: 10%;
+    text-align: right;
 }
 
 #checkoutTotalContainer {

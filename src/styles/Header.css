@@ -20,6 +20,14 @@
     }
 } */
 
+#headerWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10000;
+}
+
 #theHeadContainer {
     position: relative;
     background-color: var(--fill-accent-3);

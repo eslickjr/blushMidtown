@@ -20,7 +20,7 @@ export default function MeetTheStaff() {
                 </div>
             </section>
             <section id="meetTheStaffContainer">
-                <h1 id="meetTheStaffContainerHeader">Meet the Blush Team</h1>
+                <h1 id="meetTheStaffContainerHeader">Meet the Blush Babes</h1>
                 <div className="staffContainer">
                     <div className="staffImgCon">
                         <img className="staffImg" src={court} alt="Courtney Schultz" />

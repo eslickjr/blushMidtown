@@ -1,4 +1,4 @@
-export interface Service {
+export interface ServiceI {
     type: string;
     priceBottom: number;
     priceTop: number;
@@ -6,7 +6,7 @@ export interface Service {
     addOn?: boolean;
 }
 
-export default interface ServiceType {
+export default interface ServiceTypeI {
     name: string;
-    services: Service[];
+    services: ServiceI[];
 }

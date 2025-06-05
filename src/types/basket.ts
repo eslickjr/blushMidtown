@@ -1,23 +1,23 @@
-export interface Service {
+export interface BasketServiceI {
     name: string;
     type: string;
     price: number;
 }
 
-export interface AddService {
+export interface BasketAddServiceI {
     type: string;
     price: number;
 }
 
-export interface Stylist {
+export interface BasketStylistI {
     name: string;
     src: string;
 }
 
-export default interface Basket {
-    service: Service;
-    addServices: AddService[];
-    stylist: Stylist;
+export default interface BasketI {
+    service: BasketServiceI;
+    addServices: BasketAddServiceI[];
+    stylist: BasketStylistI;
     date: Date | undefined;
     timeEnd: string | undefined;
     note: string;

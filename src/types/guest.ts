@@ -1,7 +1,6 @@
-export default interface AddServiceI {
+export default interface GuestAppointmentI {
     type: string;
     priceBottom: number;
     priceTop: number;
     desc?: string;
-    match?: string[];
 }

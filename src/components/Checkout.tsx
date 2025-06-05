@@ -29,6 +29,7 @@ export default function Checkout({ setServiceDate, basket }: CheckoutProps) {
           </div>
           {basket.addServices.map((addService, index) => (
             <div key={index} className="checkoutAddService">
+              <h4 className="checkoutAddServiceName" />
               <p className="checkoutServiceType">{addService.type}</p>
               <p className="checkoutServicePrice">${addService.price.toFixed(2)}</p>
             </div>
@@ -51,10 +52,6 @@ export default function Checkout({ setServiceDate, basket }: CheckoutProps) {
           <strong id="checkoutSubtitle">Review your appointment details, then click 'Book Appointment' to complete appointment</strong>
           {serviceCheckout()}
           <p id="checkoutSurcharge"><strong id="checkoutSurchargeBold">A surcharge fee may be added to all payments made by credit card.</strong> This fee will be due at the time of credit card payment and is non-refundable.</p>
-        {/* </div>
-      </section>
-      <section id="checkoutNoteWrapper">
-        <div id="checkoutNoteContainer"> */}
           <input type="text" id="checkoutNote" placeholder="Appointment Note" />
           <span id="noteSpan">Notes area should not be used to request additional service(s).</span>
         </div>

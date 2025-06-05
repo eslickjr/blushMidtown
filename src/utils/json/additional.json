@@ -7,22 +7,38 @@
   {
     "type": "Brow Wax & Tint",
     "priceBottom": 30,
-    "priceTop": 30
+    "priceTop": 30,
+    "match": [
+      "Brow Wax",
+      "Brow Tinting",
+      "Brow and Lip Wax"
+    ]
   },
   {
     "type": "Brow and Lip Wax",
     "priceBottom": 30,
-    "priceTop": 30
+    "priceTop": 30,
+    "match": [
+      "Brow Wax",
+      "Brow Wax & Tint"
+    ]
   },
   {
     "type": "Brow Wax",
     "priceBottom": 15,
-    "priceTop": 15
+    "priceTop": 15,
+    "match": [
+      "Brow Wax & Tint",
+      "Brow and Lip Wax"
+    ]
   },
   {
     "type": "Brow Tinting",
     "priceBottom": 20,
-    "priceTop": 20
+    "priceTop": 20,
+    "match": [
+      "Brow Wax & Tint"
+    ]
   },
   {
     "type": "Fairy Hair Tinsel Extensions",
