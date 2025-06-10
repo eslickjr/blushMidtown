@@ -5,7 +5,7 @@
     justify-content: center;
     width: 100%;
     background-color: var(--fill-background-primary);
-    padding: 0 0 40px 0;
+    padding: 0;
 }
 
 #bookOnlineWelcomeHeader {
@@ -103,6 +103,7 @@
     font-size: 18px;
     line-height: 1.8em;
     font-weight: bold;
+    margin-bottom: 40px;
 }
 
 #bookOnlineServicesBookTypeCon {
@@ -177,7 +178,7 @@
     line-height: 1.8em;
     padding: 0;
     margin: 0;
-    /* margin: 0 0 20px 0; */
+    margin: 0 0 20px 0;
 }
 
 .bookOnlineServicesWarn {
@@ -259,7 +260,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    width: calc((100vw - 160px) / 3);
+    width: calc((100vw - 160px) / 4);
     aspect-ratio: 1/1;
     background-color: var(--fill-accent-4);
     border-radius: 50%;
@@ -326,6 +327,31 @@
     color: rgba(195, 135, 135, 0.6);
 }
 
+#bookOnlineServicesStylistHeader {
+    margin: 0;
+    padding: 0;
+}
+
+#bookOnlineServicesStylistSubHeader {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: center;
+}
+
+#bookOnlineServicesStylistAvailable {
+    font-size: 24px;
+    color: var(--fill-accent);
+    /* transition: color 0.3s ease; */
+}
+
+#bookOnlineServicesStylistAvailable:hover {
+    color: rgba(195, 135, 135, 0.6);
+    cursor: pointer;
+}
 
 
 

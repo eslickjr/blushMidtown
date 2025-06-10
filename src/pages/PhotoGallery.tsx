@@ -99,7 +99,7 @@ export default function PhotoGallery() {
     return (
         <section id="photoGallerySection">
             {photosEl()}
-            <Link id="photoGalleryLink" to="/">SCHEDULE AN APPOINTMENT</Link>
+            <Link id="photoGalleryLink" to="/bookOnline">SCHEDULE AN APPOINTMENT</Link>
         </section>
     );
 }

@@ -38,6 +38,7 @@
     align-items: center;
     padding: 5px 13px 5px 13px;
     font-weight: 700;
+    text-decoration: none;
     box-shadow: 1.93px 2.30px 8px 0px rgba(0, 0, 0, 0.45);
     transition: background-color 0.4s ease;
 }
@@ -284,6 +285,7 @@
     align-items: center;
     padding: 5px 13px 5px 13px;
     box-shadow: 1.93px 2.30px 8px 0px rgba(0, 0, 0, 0.45);
+    text-decoration: none;
     transition: background-color 0.4s ease;
 }
 

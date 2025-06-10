@@ -25,8 +25,8 @@ export default function MeetTheStaff() {
                     <div className="staffImgCon">
                         <img className="staffImg" src={court} alt="Courtney Schultz" />
                         <div className="staffLinkCon">
-                            <Link className="staffApt staffBtn" to="/book-online">Schedule an Appointment</Link>
-                            <Link className="staffInst staffBtn" to="/work-with-us">INSTAGRAM</Link>
+                            <Link className="staffApt staffBtn" to="/bookOnline">Schedule an Appointment</Link>
+                            <a className="staffInst staffBtn" href="https://www.instagram.com/itscourtneyschair?igsh=emJ2cXUxcHQwaDMz&utm_source=qr">INSTAGRAM</a>
                         </div>
                     </div>
                     <div className="staffTextCon">
@@ -67,8 +67,8 @@ export default function MeetTheStaff() {
                     <div className="staffImgCon">
                         <img className="staffImg" src={grace} alt="Grace Frisch" />
                         <div className="staffLinkCon">
-                            <Link className="staffApt staffBtn" to="/book-online">Schedule an Appointment</Link>
-                            <Link className="staffInsta staffBtn" to="/work-with-us">INSTAGRAM</Link>
+                            <Link className="staffApt staffBtn" to="/bookOnline">Schedule an Appointment</Link>
+                            <a className="staffInsta staffBtn" href="https://www.instagram.com/gracetheglamourguru?igsh=MWI3a3A5bmE4NHI1Yg%3D%3D&utm_source=qr">INSTAGRAM</a>
                         </div>
                     </div>
                     <div className="staffTextCon">
@@ -107,8 +107,8 @@ export default function MeetTheStaff() {
                     <div className="staffImgCon">
                         <img className="staffImg" src={savannah} alt="Savannah Clark" />
                         <div className="staffLinkCon">
-                            <Link className="staffApt staffBtn" to="/book-online">Schedule an Appointment</Link>
-                            <Link className="staffInsta staffBtn" to="/work-with-us">INSTAGRAM</Link>
+                            <Link className="staffApt staffBtn" to="/bookOnline">Schedule an Appointment</Link>
+                            <a className="staffInsta staffBtn" href="https://www.instagram.com/hairbysavannahclark/">INSTAGRAM</a>
                         </div>
                     </div>
                     <div className="staffTextCon">
@@ -147,8 +147,8 @@ export default function MeetTheStaff() {
                     <div className="staffImgCon">
                         <img className="staffImg" src={sydney} alt="Sydney Salgado" />
                         <div className="staffLinkCon">
-                            <Link className="staffApt staffBtn" to="/book-online">Schedule an Appointment</Link>
-                            <Link className="staffInsta staffBtn" to="/work-with-us">INSTAGRAM</Link>
+                            <Link className="staffApt staffBtn" to="/bookOnline">Schedule an Appointment</Link>
+                            <a className="staffInsta staffBtn" href="https://www.instagram.com/_syd.styles/">INSTAGRAM</a>
                         </div>
                     </div>
                     <div className="staffTextCon">
@@ -187,8 +187,8 @@ export default function MeetTheStaff() {
                     <div className="staffImgCon">
                         <img className="staffImg" src={rachel} alt="Rachel Reisinger" />
                         <div className="staffLinkCon">
-                            <Link className="staffApt staffBtn" to="/book-online">Schedule an Appointment</Link>
-                            <Link className="staffInsta staffBtn" to="/work-with-us">INSTAGRAM</Link>
+                            <Link className="staffApt staffBtn" to="/bookOnline">Schedule an Appointment</Link>
+                            <a className="staffInsta staffBtn" href="https://www.instagram.com/busybeebeauty22?igsh=ZWpjdG05MTNuZHpv">INSTAGRAM</a>
                         </div>
                     </div>
                     <div className="staffTextCon">
@@ -227,8 +227,8 @@ export default function MeetTheStaff() {
                     <div className="staffImgCon">
                         <img className="staffImg" src={jen} alt="Jennifer Schultz" />
                         <div className="staffLinkCon">
-                            <Link className="staffApt staffBtn" to="/book-online">Schedule an Appointment</Link>
-                            <Link className="staffInsta staffBtn" to="/work-with-us">INSTAGRAM</Link>
+                            <Link className="staffApt staffBtn" to="/bookOnline">Schedule an Appointment</Link>
+                            <a className="staffInsta staffBtn" href="https://www.instagram.com/thebeautychronicles2.0/">INSTAGRAM</a>
                         </div>
                     </div>
                     <div className="staffTextCon">

@@ -27,14 +27,15 @@ export default function Stylist({ setAddServicePass, setStylist, stylistsData }:
         <div id="bookOnlineServicesStylist" className="bookOnlineServicesContainer">
             <h2 id="bookOnlineServicesStylistBack" className="bookOnlineServicesBack" onClick={() => setAddServicePass(false)}>Back</h2>
             <h2 id="bookOnlineServicesStylistHeader" className="bookOnlineServicesHeader">Select a Stylist</h2>
+            <h4 id="bookOnlineServicesStylistSubHeader">or go with <span id="bookOnlineServicesStylistAvailable" onClick={() => {setStylist(stylistsData[Math.floor(Math.random() * stylistsData.length)])}}>First Available</span></h4>
             {stylistList()}
-            <div className="bookOnlineStylistItem" key={stylistsData.length} onClick={() => {setStylist(stylistsData[Math.floor(Math.random() * stylistsData.length)])}}>
+            {/* <div className="bookOnlineStylistItem" key={stylistsData.length} onClick={() => {setStylist(stylistsData[Math.floor(Math.random() * stylistsData.length)])}}>
                 <div className="bookOnlineStylistImageCon">
                     <div id="bookOnlineRandomStylist" className="bookOnlineStylistImage">?</div>
                     <div className="bookOnlineStylistImageOverlay" />
                 </div>
                 <h2 className="bookOnlineStylistHeader">Random</h2>
-            </div>
+            </div> */}
         </div>
     );
 }

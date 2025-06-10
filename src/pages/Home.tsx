@@ -19,7 +19,7 @@ export default function Home() {
             <section id="home">
                 <div id="homeImage">
                     <img id="homeImageLogo" src={landingImageLogo} alt="Home" />
-                    <input id="homeImageButton" type="button" value="SCHEDULE AN APPOINTMENT" onClick={() => window.location.href = "/BookOnline"} />
+                    <Link id="homeImageButton" to="/BookOnline">SCHEDULE AN APPOINTMENT"</Link>
                 </div>
                 <div id="homeText">
                     <a id="homePhone" className="homeInfo" href="tel:864-263-7864">864-263-7864</a>
@@ -53,8 +53,8 @@ export default function Home() {
                         <br/>
                         Whether you’re booking highlights, custom color, extensions, or professional makeup, our talented team is here to help you look and feel your absolute best.</p>
                     <div id="homeWelcomeButtonsContainer">
-                        <input className="homeWelcomeButton" type="button" value="CALL US" onClick={() => window.location.href = "tel:864-232-5884"} />
-                        <input className="homeWelcomeButton" type="button" value="EMAIL US" onClick={() => window.location.href = "mailto:blushmidtown@gmail.com"} />
+                        <a className="homeWelcomeButton" href="tel:864-232-5884">CALL US</a>
+                        <a className="homeWelcomeButton" href="mailto:blushmidtown@gmail.com">EMAIL US</a>
                     </div>
                 </div>
             </section>
@@ -134,7 +134,7 @@ export default function Home() {
                     <div id="homeClientWordsContainer">
                         <h1 id="homeClientWordsHeader">Words From Our Fabulous Clients</h1>
                         <p id="homeClientWordsText">It makes us so happy to see the number of positive reviews we get on a regular basis. The number of referrals and repeat customers is also proof that we are performing an outstanding service for our clients.</p>
-                        <a id="homeClientWordsLink" href="https://g.page/r/CZAzlt-g-VzzEBM/review">Leave us a Google Review!</a>
+                        <a id="homeClientWordsLink" href="https://g.page/r/CZAzlt-g-VzzEBM/review" target="_blank" rel="noopener noreferrer">Leave us a Google Review!</a>
                     </div>
                 </div>
             </section>
@@ -167,7 +167,7 @@ export default function Home() {
             <section id="homeFollowUs">
                 <h1 id="homeFollowUsHeader">
                     Follow us on Instagram&nbsp;
-                    <a id="homeFollowUsLink" href="https://www.instagram.com/blushmidtown/" target="_blank" rel="noopener noreferrer">@blushhairstudio_greenville</a>
+                    <a id="homeFollowUsLink" href="https://www.instagram.com/blushmidtowngreenvillesalon/" target="_blank" rel="noopener noreferrer">@blushhairstudio_greenville</a>
                 </h1>
                 <div>
 

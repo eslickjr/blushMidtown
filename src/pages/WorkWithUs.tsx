@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 
 import "../styles/WorkWithUs.css";
 
@@ -48,6 +49,22 @@ export default function WorkWithUs() {
         );
     }
 
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_5ewqe1m',
+            'template_rcllioz',
+            e.currentTarget,
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        ).then((result) => {
+            console.log("Email sent successfully:", result.text);
+            e.currentTarget.reset(); // Reset the form after successful submission
+        }, (error) => {
+            console.error("Error sending email:", error.text);
+        });
+    }
+
     return (
         <main id="workWithUsContainer">
             {workSlider()}
@@ -70,7 +87,7 @@ export default function WorkWithUs() {
                     <img id="workWithUsFormImage" src={haircut} alt="Haircut" />
                 </div>
                 <div id="workWithUsFormContainer" className="workWithUsFormContainers">
-                    <form id="workWithUsForm" action="https://formspree.io/f/xjvowzqk" method="POST">
+                    <form id="workWithUsForm" onSubmit={(e) => sendEmail(e)}>
                         <input className="workWithUsInput" type="text" placeholder="First Name" required />
                         <input className="workWithUsInput" type="text" placeholder="Last Name" required />
                         <input className="workWithUsInput" type="email" placeholder="Email" required />
