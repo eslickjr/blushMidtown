@@ -10,16 +10,31 @@ function App() {
   const location = useLocation();
   const [loaded, setLoaded] = useState(false);
   const [loadOut, setLoadOut] = useState(false);
+  const [mobile, setMobile] = useState(window.innerWidth <= window.innerHeight);
+  const [signedIn, setSignedIn] = useState<string>("");
+  const [clientNav, setClientNav] = useState<string>("Appointments");
 
   useEffect(() => {
-    setLoaded(true);
+    if (!mobile) setLoaded(true);
 
-    // const timeout = setTimeout(() => {
-    //   setLoaded(false);
-    // }, 500); // Adjust the timeout duration as needed
+    const handleResize = () => {
+      setMobile(window.innerWidth <= window.innerHeight);
+    };
 
-    // return () => clearTimeout(timeout);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, [location.pathname]);
+
+  const handleClientNav = (navItem: string) => {
+        if (clientNav === navItem) {
+            setClientNav("");
+        } else {
+            setClientNav(navItem);
+        }
+    }
 
   const bloomOut = () => {
     setLoadOut(true);
@@ -32,10 +47,10 @@ function App() {
   return (
     <div className="project-app">
         <div className={`loading-screen ${loaded ? 'hidden' : ''} ${loadOut ? 'changeScreen' : ''}`} />
-        <Header bloomOut={bloomOut}/>
+        <Header signedIn={signedIn} setSignedIn={setSignedIn} clientNav={clientNav} handleClientNav={handleClientNav} bloomOut={bloomOut}/>
         <main className="mx-3">
           <ScrollToTop />
-          <Outlet />
+          <Outlet context={{signedIn, setSignedIn, clientNav, handleClientNav, bloomOut}}/>
         </main>
         <Footer bloomOut={bloomOut}/>
     </div>

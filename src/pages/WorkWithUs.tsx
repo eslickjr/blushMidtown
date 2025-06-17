@@ -13,9 +13,16 @@ export default function WorkWithUs() {
     const [selectState, setSelectState] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
-    const photoArray = [upsideDown, katieHair, secret, team];
+    const [photoNum, setPhotoNum] = useState(window.innerWidth <= 768 ? (window.innerWidth <= 490 ? 4 : 5) : 6);
+
+    const photoArray: string[] = [upsideDown, katieHair, secret, team];
 
     useEffect(() => {
+        const handleResize = () => {
+            setPhotoNum(window.innerWidth <= 768 ? (window.innerWidth <= 490 ? 4 : 5) : 6);
+        }
+        window.addEventListener("resize", handleResize);
+
         setInterval(() => {
             setAnimating(true);
 
@@ -24,13 +31,17 @@ export default function WorkWithUs() {
                 setAnimating(false);
             }, 500); // Start animation after 1 second
         }, 4000); // Change image every 5 seconds
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
     }, []);
 
     const workSlider = () => {
 
         const photoData = [];
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < photoNum; i++) {
             photoData.push({
                 id: i + 1,
                 src: photoArray[(currentIndex + i) % photoArray.length],

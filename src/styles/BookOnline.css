@@ -11,6 +11,7 @@
 #bookOnlineWelcomeHeader {
     font: var(--font_0);
     font-size: 56px;
+    text-align: center;
     color: var(--title);
     padding: 20px 0;
     margin: 0;
@@ -26,6 +27,7 @@
 }
 
 #bookOnlineReturningForm, #bookOnlineNewForm {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -35,6 +37,21 @@
 
 #bookOnlineReturningForm {
     border-right: 1px solid var(--fill-base-2);
+}
+
+#bookOnlineNewFormSpan {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: var(--fill-background-primary);
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    transform: translate(-50%, -50%);
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    z-index: 1;
 }
 
 #bookOnlineReturningFormInputCon {
@@ -104,6 +121,10 @@
     line-height: 1.8em;
     font-weight: bold;
     margin-bottom: 40px;
+}
+
+#bookOnlineServices.bookOnlineServicesSignedIn {
+    padding-top: 40px;
 }
 
 #bookOnlineServicesBookTypeCon {
@@ -259,7 +280,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 0.6em;
     width: calc((100vw - 160px) / 4);
     aspect-ratio: 1/1;
     background-color: var(--fill-accent-4);
@@ -353,6 +374,100 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1140px) {
+    #bookOnlineWelcomeForm {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    #bookOnlineReturningForm {
+        border-right: none;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--fill-base-2);
+    }
 
+    #bookOnlineNewForm {
+        padding-top: 40px;
+    }
 
+    #bookOnlineNewFormSpan {
+        display: flex;
+    }
+
+    #bookOnlineWelcomeNote {
+        width: 100%;
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 1126px) {
+    #bookOnlineServiceTypes, #bookOnlineServiceList {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .bookOnlineServiceTypeItem, .bookOnlineAddServiceItem {
+        width: auto;
+        height: auto;
+        min-width: 180px;
+        max-width: 250px;
+        aspect-ratio: 1;
+        flex: 1 0 0%;
+    }
+
+    .bookOnlineServiceItem {
+        width: auto;
+        height: auto;
+        min-width: 340px;
+        aspect-ratio: 1;
+        flex: 1 0 0%;
+    }
+}
+
+@media screen and (max-width: 1058px) {
+    #bookOnlineWelcome {
+        padding-top: 7vw;
+    }
+
+    #bookOnlineWelcome.bookOnlineClientNavHeader {
+        padding-top: 11vw;
+    }
+
+    #bookOnlineWelcome.bookOnlineMobileHeader {
+        padding-top: 0;
+    }
+
+    #bookOnlineServices.bookOnlineServicesSignedIn {
+        padding-top: 11vw;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .bookOnlineStylistItem {
+        flex: 1 0 0%;
+    }
+
+    .bookOnlineStylistImageCon {
+        min-width: 180px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #bookOnlineServicesBookTypeCon {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #bookOnlineReturningForm, #bookOnlineNewForm {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .bookOnlineFormInput {
+        width: 100%;
+    }
+}

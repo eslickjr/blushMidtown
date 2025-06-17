@@ -163,3 +163,32 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width: 1264px) {
+    #footerSocialMedias {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    .footerInfoContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    #developerInfo {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #footerInfoContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

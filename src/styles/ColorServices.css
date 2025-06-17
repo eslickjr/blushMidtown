@@ -168,9 +168,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 3px;
-    background-color: var(--custom-6);
-    height: 20px;
 }
 
 .colorServiceListLink {
@@ -182,7 +179,12 @@
     text-wrap: nowrap;
     margin: 0;
     padding: 0 10px;
+    border-right: 3px solid var(--custom-6);
     background-color: var(--fill-background-primary);
+}
+
+.colorServiceListLink:nth-last-child(1) {
+    border-right: none;
 }
 
 #colorServiceList {
@@ -259,4 +261,35 @@
 
 .colorServiceItemLink:hover {
     background-color: rgba(195, 135, 135, 0.6);
+}
+
+@media screen and (max-width: 1058px) {
+    #colorServiceCarouselWrapper {
+        padding-top: 7vw;
+        width: 100%;
+    }
+
+    #colorServiceCarouselContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #colorServiceListContainer {
+        width: 100%;
+    }
+
+    #colorServiceListLinksContainer {
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .colorServiceListHeader {
+        width: 90%;
+    }
+
+    .colorServiceItem {
+        width: 90%;
+        padding: 0 20px;
+    }
 }

@@ -12,14 +12,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    padding: 20px;
+    padding: 60px 20px 20px 20px;
     background-color: var(--fill-accent-4);
 }
 
 .availabilityToday, .availabilityTomorrow {
     font: var(--font-style-body-medium);
     color: var(--text-primary);
-    width: 50%;
+    width: 850px;
     margin: 0 auto;
     padding: 0 100px 20px 100px;
 }
@@ -245,3 +245,19 @@
 /* .calendarHeadCell:nth-child(1) {
     border-top-left-radius: 10px;
 } */
+
+/* Custom scrollbar color for mobile */
+@media (pointer: coarse) {
+    .availabilityContainer {
+        scrollbar-color: var(--fill-accent) var(--fill-accent-4);
+        scrollbar-width: thin;
+    }
+    .availabilityContainer::-webkit-scrollbar {
+        width: 8px;
+        background: var(--fill-accent-4);
+    }
+    .availabilityContainer::-webkit-scrollbar-thumb {
+        background: var(--fill-accent);
+        border-radius: 8px;
+    }
+}

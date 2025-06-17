@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import "../styles/Home.css";
 import landingImageLogo from "../assets/logo/Blush_Landing.avif";
@@ -14,13 +15,32 @@ import stylingKatie from "../assets/styling_katie.avif";
 import ad from "../assets/ad.avif";
 
 export default function Home() {
+    const [mobile, setMobile] = useState<boolean>(window.innerWidth < 980);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setMobile(window.innerWidth < 980);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <main>
             <section id="home">
-                <div id="homeImage">
-                    <img id="homeImageLogo" src={landingImageLogo} alt="Home" />
-                    <Link id="homeImageButton" to="/BookOnline">SCHEDULE AN APPOINTMENT"</Link>
-                </div>
+                {mobile ? 
+                    <div id="homeImageWrapper">
+                        {/* <img id="homeImageLogo" src={landingImageLogo} alt="Home" /> */}
+                        <div id="homeImage"/>
+                        <Link id="homeImageButton" to="/BookOnline">SCHEDULE AN APPOINTMENT</Link>
+                    </div>
+                :
+                    <div id="homeImage">
+                        <img id="homeImageLogo" src={landingImageLogo} alt="Home" />
+                        <Link id="homeImageButton" to="/BookOnline">SCHEDULE AN APPOINTMENT</Link>
+                    </div>
+                }
                 <div id="homeText">
                     <a id="homePhone" className="homeInfo" href="tel:864-263-7864">864-263-7864</a>
                     <a id="homeEmail" className="homeInfo" href="mailto:Info@BlushMidtownSalon.com">Info@BlushMidtownSalon.com</a>

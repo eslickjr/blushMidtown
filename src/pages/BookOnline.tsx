@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 import "../styles/BookOnline.css";
 
@@ -27,8 +28,17 @@ import UserArea from "../components/UserArea";
 
 import BasketI, { BasketServiceI, BasketAddServiceI, BasketStylistI } from "../types/basket";
 
+type ContextType = {
+    signedIn: string;
+    setSignedIn: (signedIn: string) => void;
+    clientNav: string;
+    setClientNav: (clientNav: string) => void;
+    handleClientNav: (navItem: string) => void;
+    bloomOut: () => void;
+}
+
 export default function BookOnline() {
-    const [signedIn, setSignedIn] = useState<string>("");
+    const { signedIn, setSignedIn, clientNav, setClientNav } = useOutletContext<ContextType>();
     const [firstTime, setFirstTime] = useState<boolean>(true);
     const [bookType, setBookType] = useState<string>("");
     const [serviceTypeId, setServiceTypeId] = useState<number>(-1);
@@ -38,7 +48,6 @@ export default function BookOnline() {
     const [service, setService] = useState<BasketServiceI>(defaultService);
     const defaultStylist: BasketStylistI = { name: "", src: "" };
     const [stylist, setStylist] = useState<BasketStylistI>(defaultStylist);
-    const [clientNav, setClientNav] = useState<string>("Appointments");
     const [basket, setBasket] = useState<BasketI>({
         service: service,
         addServices: [],
@@ -98,7 +107,7 @@ export default function BookOnline() {
     return (
         <main id="bookOnline">
             <UserArea signedIn={signedIn} setSignedIn={setSignedIn} firstTime={firstTime} setFirstTime={setFirstTime} stylistData={stylistsData} bookType={bookType} clientNav={clientNav} setClientNav={setClientNav} rebook={rebook} serviceTypes={serviceTypes} />
-            <section id="bookOnlineServices" className="bookOnlineSection">
+            <section id="bookOnlineServices" className={`bookOnlineSection ${signedIn && !clientNav ? "bookOnlineServicesSignedIn" : ""}`}>
                 {!bookType ? (
                     <div id="bookOnlineServicesBookTypeCon">
                         <h2 id="bookOnlineServicesAppointment" className="bookOnlineServicesBookType" onClick={() => {setBookType("appointment"); setClientNav("");}}>Book an Appointment</h2>

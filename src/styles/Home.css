@@ -7,6 +7,15 @@
     padding-top: 60px;
 }
 
+#homeImageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
 #homeImage {
     background: url("../assets/landing.avif") no-repeat center center;
     background-size: cover;
@@ -548,6 +557,149 @@
     color: var(--custom-3);
 }
 
+@media screen and (max-width: 980px) {
+    #home {
+        padding: 5vw 20px 0 20px;
+    }
+
+    #homeImage {
+        width: 100%;
+        height: auto;
+    }
+
+    #homeImageLogo {
+        width: 80%;
+        aspect-ratio: 600/89;
+        margin-bottom: 40px;
+    }
+
+    #homeImageButton {
+        width: 60%;
+    }
+
+    #homeText {
+        width: 100%;
+    }
+
+    .homeServicesContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #homeServicesWrapper .homeServicesContainer .homeServicesImage {
+        width: 50%;
+        margin: 20px 0;
+    }
+
+    #homeVoteWrapper {
+        flex-direction: column;
+    }
+    
+    #homeWelcome {
+        width: 100%;
+        overflow: hidden;
+        padding: 0 40px;
+    }
+
+    #homeWelcomeBackground {
+        aspect-ratio: 1905/426;
+        height: 100%;
+        width: auto;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    #homeWelcomeContainer {
+        width: 100%;
+    }
+
+    #homeServicesWrapper {
+        width: 100%;
+        padding: 20px 40px;
+    }
+
+    #homeServicesWrapper .homeServicesContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .homeServicesImage {
+        width: 40%;
+        margin: 20px 0;
+    }
+
+    #homeClientWordsWrapper {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    #homeQuotes {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .homeQuotesContainer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1) {
+    #homeImageButton {
+        text-align: center;
+        width: 90%;
+    }
+
+    #homeVote {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #homeVoteLink {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .homeWelcomeButton {
+        margin: 10px;
+    }
+
+    #homeServicesLink {
+        text-align: center;
+    }
+
+    #homeClientWordsWrapper {
+        width: 100%;
+    }
+
+    #homeClientWordsImage {
+        width: 100%;
+        height: auto;
+    }
+
+    #homeClientWordsContainer {
+        width: 100%;
+    }
+
+    #homeClientWordsHeader {
+        width: 100%;
+        padding: 0;
+        margin-top: 40px;
+        text-align: center;
+        text-wrap: wrap;
+    }
+
+    #homeClientWordsLink {
+        text-align: center;
+    }
+}
 
 
 

@@ -149,3 +149,81 @@
 .staffContainer:nth-child(odd) .staffBold {
     color: var(--text-secondary);
 }
+
+@media screen and (max-width: 1058px) {
+    #meetTheStaffWelcomeContainer {
+        padding-top: 11vw;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #meetTheStaffWelcome {
+        width: 90%;
+    }
+
+    .staffContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staffName {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* .staffImgCon,
+    .staffTextCon {
+        width: 100%;
+    }
+
+    .staffText {
+        width: 90%;
+    } */
+
+}
+
+@media screen and (max-width: 770px) {
+    .staffBtn {
+        text-align: center;
+        text-wrap: wrap;
+    }
+
+    .staffImgCon {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        padding: 0 20px;
+    }
+
+    .staffImg {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+
+    .staffLinkCon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .staffTextCon {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .staffText {
+        width: 100%;
+    }
+}
+
+@media screen and (max-aspect-ratio: 1) {
+    #meetTheStaffContainerHeader {
+        text-align: center;
+        width: 100%;
+    }
+}

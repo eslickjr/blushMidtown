@@ -59,3 +59,14 @@
 #cancelThankYou {
     margin-top: 40px;
 }
+
+@media screen and (max-width: 1058px) {
+    #cancellationPolicy {
+        padding: 7vw 20px 0 20px;
+    }
+
+    .policySection h1, .policySection p {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

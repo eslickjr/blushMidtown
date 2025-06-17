@@ -1,6 +1,7 @@
 
 
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import "../styles/ServiceMenu.css"; // Assuming you have a CSS file for styling
 
@@ -13,6 +14,20 @@ import bridal from "../assets/serviceMenu/bridal.avif";
 import waxing from "../assets/serviceMenu/waxing.avif";
 
 export default function ServiceMenu() {
+    const [mobile, setMobile] = useState(window.innerWidth <= 1058);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setMobile(window.innerWidth <= 1058);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <main id="serviceMenu">
             <section id="serviceMenuWelcome">
@@ -160,7 +175,7 @@ export default function ServiceMenu() {
                             <div id="serviceMenuBridalHeaderCon" className="serviceMenuHeaderCon">
                                 <h2 id="serviceMenuBridalHeader" className="serviceMenuHeader">
                                     Bridal and Special
-                                    <br />
+                                    {!mobile && <br />}
                                     Occasion Hair & Makeup
                                 </h2>
                                 <Link id="serviceMenuBridalLink" className="serviceMenuLink" to="/bookOnline">BOOK NOW</Link>

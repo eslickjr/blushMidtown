@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 0;
+    padding: 60px 0 40px 0;
     width: 980px;
     margin: 0 auto;
 }
@@ -104,28 +104,21 @@
     border-top: none;
 }
 
-#checkoutServiceName, .checkoutAddServiceName {
+#checkoutServiceName, .checkoutAddServiceName, .checkoutServiceType, .checkoutServicePrice {
     font: var(--font-style-body-medium);
     color: var(--text-primary);
     text-align: left;
     font-size: 18px;
     padding: 0;
     margin: 0;
-    width: 45%; /* Adjusted for stylist image width */
+    width: 33%; /* Adjusted for stylist image width */
 }
 
-.checkoutServiceType, .checkoutServicePrice {
-    font: var(--font-style-body-small);
-    color: var(--text-primary);
-    text-align: left;
-    font-size: 18px;
-    padding: 0;
-    margin: 0;
-    width: 45%; /* Adjusted for stylist image width */
+.checkoutServiceType {
+    text-align: center;
 }
 
 .checkoutServicePrice {
-    width: 10%;
     text-align: right;
 }
 
@@ -325,4 +318,17 @@
 #checkoutButton:hover {
     background-color: var(--button-fill-secondary-hover);
     color: var(--button-text-secondary-hover);
+}
+
+@media screen and (max-width: 1020px) {
+    #checkoutSummary, #checkoutCancellationContainer {
+        width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #checkoutServiceDate {
+        flex-direction: column;
+        align-items: center;
+    }
 }

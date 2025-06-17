@@ -131,6 +131,7 @@
     /* aspect-ratio: 1 / 0.8; */
     aspect-ratio: 1 / 0.63;
     overflow-y: auto;
+    padding-right: 20px;
 }
 
 .bookOnlineFormHeader {
@@ -329,4 +330,31 @@
     /* animation: trash 1s linear forwards; */
     transform: translateY(-10px) rotate(22.5deg);
     cursor: pointer;
+}
+
+@media screen and (max-width: 910px) {
+    #bookOnlineAppointments {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #emailOptInContainer {
+        width: 100%;
+    }
+}
+
+@media (pointer: coarse) {
+    #bookOnlinePreviousAppointmentsList, #bookOnlinePaymentMethodsList {
+        scrollbar-color: var(--fill-accent) var(--fill-accent-4);
+        scrollbar-width: thin;
+    }
+    #bookOnlinePreviousAppointmentsList::-webkit-scrollbar, #bookOnlinePaymentMethodsList::-webkit-scrollbar {
+        width: 8px;
+        background: var(--fill-accent-4);
+    }
+    #bookOnlinePreviousAppointmentsList::-webkit-scrollbar-thumb, #bookOnlinePaymentMethodsList::-webkit-scrollbar-thumb {
+        background: var(--fill-accent);
+        border-radius: 8px;
+    }
 }

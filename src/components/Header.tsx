@@ -5,30 +5,79 @@ import "../styles/Header.css";
 import blushLogo from "../assets/logo/BLUSH_LogoCream.avif";
 import blushShort from "../assets/logo/B.jpg";
 
-export default function Header(bloomOut: { bloomOut: () => void }) {
+interface HeaderProps {
+  signedIn: string;
+  setSignedIn: (signedIn: string) => void;
+  clientNav: string;
+  handleClientNav: (navItem: string) => void;
+  bloomOut: () => void;
+}
+
+export default function Header({ signedIn, setSignedIn, clientNav, handleClientNav, bloomOut }: HeaderProps) {
   const navigate = useNavigate();
-  const [mobile, setMobile] = useState(window.innerWidth <= window.innerHeight);
+  const [mobile, setMobile] = useState(window.innerWidth <= 1058);
   const [logoStyle, setLogoStyle] = useState(window.innerWidth >= 1511 ? "navLogoLong" : "navLogoShort");
   const [navExpanded, setNavExpanded] = useState(false);
+  const [navDropdown, setNavDropdown] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [displayNavbarMenu, setDisplayNavbarMenu] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setMobile(window.innerWidth <= window.innerHeight);
+      setMobile(window.innerWidth <= 1058);
       setLogoStyle(window.innerWidth >= 1511 ? "navLogoLong" : "navLogoShort");
     };
 
+    const dropdownOpen = () => {
+      setShowDropdown(true);
+      setTimeout(() => {
+        setNavDropdown(true);
+      }, 300); // Adjust the timeout duration as needed
+    }
+
+    const dropdownClose = () => {
+      setNavDropdown(false);
+      setTimeout(() => {
+        setShowDropdown(false);
+      }, 500); // Adjust the timeout duration as needed
+    }
+
+    document.getElementById("serviceMenuNavbarContainer")?.addEventListener("mouseenter", dropdownOpen);
+    document.getElementById("serviceMenuNavbarContainer")?.addEventListener("mouseleave", dropdownClose);
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      document.getElementById("serviceMenuNavbarContainer")?.removeEventListener("mouseenter", dropdownOpen);
+      document.getElementById("serviceMenuNavbarContainer")?.removeEventListener("mouseleave", dropdownClose);
     };
   }, []);
 
   const reRoute = (path: string) => {
-    bloomOut.bloomOut();
+    if (!mobile) {
+      bloomOut();
+    } else {
+      handleNavCollapse();
+    }
     setTimeout(() => {
       navigate(path);
     }, 500); // Adjust the timeout duration as needed
+  };
+
+  const handleNavExpand = () => {
+    setDisplayNavbarMenu(true);
+    setTimeout(() => {
+      setNavExpanded(true);
+    }, 10);
+    document.body.style.overflowY = "hidden";
+  }
+
+  const handleNavCollapse = () => {
+    setTimeout(() => {
+      setDisplayNavbarMenu(false);
+    }, 1000); // Adjust the timeout duration as needed
+    setNavExpanded(false);
+    document.body.style.overflowY = "";
   };
 
   // const handleExpand = () => {
@@ -57,19 +106,32 @@ export default function Header(bloomOut: { bloomOut: () => void }) {
                 <img id="navLogoLong" className={!mobile ? logoStyle : "navLogoLong"} src={blushLogo} alt="Logo" />
                 <img id="navLogoShort" className={!mobile ? logoStyle : ""} src={blushShort} alt="Logo" />
               </div>
-              {mobile && <svg id="navExpand" className={navExpanded ? "navExpandOpen" : ""} onClick={() => {setNavExpanded(true); document.body.style.overflowY="hidden";}} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+              {mobile && <svg id="navExpand" className={navExpanded ? "navExpandOpen" : ""} onClick={() => handleNavExpand()} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>}
             </div>
-
-            <div className={`navbar-menu ${navExpanded ? "navbar-menu-expanded" : "navbar-menu-collapsed"}`}>
+            {signedIn && mobile &&
+              <div id="clientNavBar">
+                  <p className={`clientNavItem ${clientNav === "Profile" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Profile")}>Profile</p>
+                  <p className={`clientNavItem ${clientNav === "Appointments" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Appointments")}>Appointments</p>
+                  <p className={`clientNavItem ${clientNav === "Payment Methods" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Payment Methods")}>Payment Methods</p>
+                  <p className="clientNavItem clientNavItemInactive" onClick={() => setSignedIn("")}>Logout</p>
+              </div>
+            }
+            <div className={`navbar-menu ${navExpanded ? "navbar-menu-expanded" : "navbar-menu-collapsed"} ${displayNavbarMenu ? "navbar-menu-display" : "navbar-menu-hidden"}`}>
               <ul className={`navbar-start ${mobile ? "navbar-start-mobile" : ""} `}>
                 <li className="navbar-item" onClick={() => {/*</li>setNavExpanded(false);*/ reRoute("/");}}>
                   <div className="navbar-link">Home</div>
                 </li>
-                <li className="navbar-item" onClick={() => reRoute("/ServiceMenu")}>
-                  <div className="navbar-link">Service Menu</div>
+                <li id="serviceMenuNavbarContainer" className="navbar-item">
+                  <div id="serviceMenuNavbar" className="navbar-link" onClick={() => reRoute("/ServiceMenu")}>Service Menu</div>
+                  {!mobile && <div id="colorServicesNavbar" className={`${navDropdown ? "navDropdown" : ""} ${showDropdown ? "showDropdown" : ""} `} onClick={() => reRoute("/ColorServices")}>Color Services</div>}
                 </li>
+                {mobile &&
+                  <li className="navbar-item" onClick={() => reRoute("/ColorServices")}>
+                    <div className="navbar-link">Color Services</div>
+                  </li>
+                }
                 <li className="navbar-item" onClick={() => reRoute("/MeetTheStaff")}>
                   <div className="navbar-link">Meet the Staff</div>
                 </li>
@@ -85,7 +147,7 @@ export default function Header(bloomOut: { bloomOut: () => void }) {
                 <li className="navbar-item" onClick={() => reRoute("/SalonPolicies")}>
                   <div className="navbar-link">Salon Policies</div>
                 </li>
-                {mobile && <svg id="navCollapse" onClick={() => {setNavExpanded(false); document.body.style.overflowY = "";}} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                {mobile && <svg id="navCollapse" onClick={() => handleNavCollapse()} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                 </svg>}
               </ul>
@@ -112,6 +174,14 @@ export default function Header(bloomOut: { bloomOut: () => void }) {
               </div>
             )}
           </nav>
+          {signedIn && !mobile &&
+              <div id="clientNavBar">
+                  <p className={`clientNavItem ${clientNav === "Profile" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Profile")}>Profile</p>
+                  <p className={`clientNavItem ${clientNav === "Appointments" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Appointments")}>Appointments</p>
+                  <p className={`clientNavItem ${clientNav === "Payment Methods" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Payment Methods")}>Payment Methods</p>
+                  <p className="clientNavItem clientNavItemInactive" onClick={() => setSignedIn("")}>Logout</p>
+              </div>
+            }
       </header>
     </div>
   );

@@ -17,20 +17,22 @@
 }
 
 #workWithUsSlider {
-    height: 472px;
+    /* height: 472px; */
+    position: relative;
     width: 1216px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    overflow: hidden;
+    align-items: stretch;
+    overflow: hidden 
 }
 
 .workWithUsImageContainer {
-    height: 100%;
-    width: 294px;
+    /* height: 100%; */
+    width: calc(25% - 10px);
+    /* width: 24.18%; */
     flex: 1 0 auto;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,6 +40,7 @@
     position: relative;
     transform: translateX(-50%);
     margin: 0 5px;
+    overflow: hidden;
 }
 
 .workWithUsImageContainer.animating {
@@ -168,4 +171,60 @@
 
 #workWithUsSubmit:hover {
     background-color: rgba(66, 66, 60, 0.6);
+}
+
+@media screen and (max-width: 1256px) {
+    #workWithUsSlider {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1058px) {
+    #workWithUsSlider {
+        padding-top: 7vw;
+    }
+
+    #workWithUsSummary {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .workWithUsText {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 938px) {
+    #workWithUsFormWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #workWithUsFormImageContainer {
+        width: 80%;
+        aspect-ratio: 1 /.5;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .workWithUsImageContainer {
+        width: calc(33.33% - 10px);
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .workWithUsImageContainer {
+        width: calc(50% - 10px);
+    }
+
+    #workWithUsFormContainer {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .workWithUsInput {
+        width: 100%;
+    }
 }

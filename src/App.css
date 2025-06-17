@@ -170,16 +170,27 @@ h2, h3, h4 {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    opacity: 1;
     pointer-events: none;
 }
 
-.loading-screen.hidden {
-    animation: bloom-in 0.25s forwards;
+@media screen and (max-aspect-ratio: 1/1) {
+    .loading-screen {
+        opacity: 0;
+    }
 }
 
-.loading-screen.changeScreen {
-    animation: bloom-out 0.25s forwards;
+@media screen and (min-aspect-ratio: 1/1) {
+    .loading-screen {
+        opacity: 1;
+    }
+
+    .loading-screen.hidden {
+        animation: bloom-in 0.25s forwards;
+    }
+
+    .loading-screen.changeScreen {
+        animation: bloom-out 0.25s forwards;
+    }
 }
 
 .mx-3 {

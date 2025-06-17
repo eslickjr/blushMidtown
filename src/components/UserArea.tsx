@@ -137,14 +137,6 @@ export default function UserArea({ signedIn, setSignedIn, firstTime, setFirstTim
         setClient(placeholderClient);
     }, []);
 
-    const handleClientNav = (navItem: string) => {
-        if (clientNav === navItem) {
-            setClientNav("");
-        } else {
-            setClientNav(navItem);
-        }
-    }
-
     const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.target.value = e.target.value.replace(/[^a-zA-Z]/g, "");
     }
@@ -212,15 +204,7 @@ export default function UserArea({ signedIn, setSignedIn, firstTime, setFirstTim
     }
 
     return (
-        <section id="bookOnlineWelcome" className="bookOnlineSection">
-            {signedIn && 
-                <div id="clientNavBar">
-                    <p className={`clientNavItem ${clientNav === "Profile" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Profile")}>Profile</p>
-                    <p className={`clientNavItem ${clientNav === "Appointments" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Appointments")}>Appointments</p>
-                    <p className={`clientNavItem ${clientNav === "Payment Methods" ? "clientNavItemActive" : "clientNavItemInactive"}`} onClick={() => handleClientNav("Payment Methods")}>Payment Methods</p>
-                    <p className="clientNavItem clientNavItemInactive" onClick={() => setSignedIn("")}>Logout</p>
-                </div>
-            }
+        <section id="bookOnlineWelcome" className={`bookOnlineSection ${signedIn ? (clientNav ? "bookOnlineClientNavHeader" : "bookOnlineMobileHeader") : ""}`}>
             {clientNav === "Appointments" && !bookType &&<h1 id="bookOnlineWelcomeHeader">Welcome{signedIn ? (firstTime ? ` ${client.firstName}!` : ` back ${client.firstName}!`) : "!"}</h1>}
             {!signedIn ?
                 <div id="bookOnlineWelcomeForm">
@@ -233,6 +217,7 @@ export default function UserArea({ signedIn, setSignedIn, firstTime, setFirstTim
                         <input className="bookOnlineFormButton" type="submit" value="Sign In" />
                     </form>
                     <form id="bookOnlineNewForm" onSubmit={e => { e.preventDefault(); setFirstTime(true); setSignedIn("New Customer");setClientNav("Appointments");}}>
+                        <span id="bookOnlineNewFormSpan">OR</span>
                         <h3 id="bookOnlineNewFormHeader" className="bookOnlineFormHeader">New Client</h3>
                         <input className="bookOnlineFormInput" type="text" placeholder="First Name" onChange={(e) => handleTextChange(e)} />
                         <input className="bookOnlineFormInput" type="text" placeholder="Last Name" onChange={(e) => handleTextChange(e)} />

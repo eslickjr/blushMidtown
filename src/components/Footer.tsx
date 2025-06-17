@@ -1,27 +1,14 @@
 import "../styles/Footer.css";
 
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function Footer(bloomOut: { bloomOut: () => void }) {
     const navigate = useNavigate();
-    const [mobile, setMobile] = useState(window.innerWidth <= window.innerHeight);
 
     useEffect(() => {
         const img1 = new Image();
         img1.src = "../assets/logos/GGBC%20_Logo_Gold2.png";
-    }, []);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setMobile(window.innerWidth <= window.innerHeight);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
     }, []);
 
     const reRoute = (path: string) => {
@@ -73,7 +60,7 @@ export default function Footer(bloomOut: { bloomOut: () => void }) {
                 </div>
             </div>
             <p id="developerInfo">
-                Blush Midtown Salon Greenville 2025 Design{!mobile ? <span>&nbsp;&</span> : <br />} Developed by&nbsp;
+                Blush Midtown Salon Greenville 2025 Design Developed by&nbsp;
                 <a id="devLink" href="https://joshua-eslick.com/" target="_blank" rel="noopener noreferrer">Joshua Eslick</a>
             </p>
         </footer>
