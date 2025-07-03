@@ -1,0 +1,501 @@
+#bookOnlineWelcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--fill-background-primary);
+    padding: 0;
+}
+
+#bookOnlineWelcomeHeader {
+    font: var(--font_0);
+    font-size: 56px;
+    text-align: center;
+    color: var(--title);
+    padding: 20px 0;
+    margin: 0;
+}
+
+#bookOnlineWelcomeForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    padding: 20px;
+}
+
+#bookOnlineReturningForm, #bookOnlineNewForm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+#bookOnlineReturningForm {
+    border-right: 1px solid var(--fill-base-2);
+}
+
+#bookOnlineNewFormSpan {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: var(--fill-background-primary);
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    transform: translate(-50%, -50%);
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    z-index: 1;
+}
+
+#bookOnlineReturningFormInputCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+.bookOnlineFormHeader {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 23px;
+    line-height: 1.8em;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.bookOnlineFormInput {
+    font: var(--font-style-body-small);
+    margin: 4px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid var(--fill-base-2);
+    border-left: 1px solid transparent;
+    background-color: var(--fill-background-primary);
+    /* padding: 3px 20% 3px 3px; */
+    padding-inline-start: 30px;
+    padding-inline-end: 3px;
+    height: 52px;
+    width: 460px;
+    color: var(--fill-base-2);
+}
+
+.bookOnlineFormInput::placeholder {
+    color: var(--fill-base-2);
+}
+
+.bookOnlineFormInput:hover {
+    border: 1px solid var(--fill-base-2);
+}
+
+.bookOnlineFormButton {
+    font: var(--font-style-body-medium);
+    display: flex;
+    margin: 15px auto;
+    background-color: var(--fill-base-2);
+    border: none;
+    color: var(--fill-background-primary);
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bookOnlineFormButton:hover {
+    background-color: rgba(66, 66, 60, 0.6);
+}
+
+#bookOnlineWelcomeNote {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8em;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#bookOnlineServices.bookOnlineServicesSignedIn {
+    padding-top: 40px;
+}
+
+#bookOnlineServicesBookTypeCon {
+    display: flex;
+    flex-direction: row;
+    justify-content: Center;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0;
+    font: var(--font-style-h2);
+    width: 100%;
+    line-height: 1.35em;
+    text-align: center;
+    font-size: 28px;
+    color: var(--title);
+    margin: 0;
+}
+
+.bookOnlineServicesBookType {
+    margin: 0;
+    text-decoration: none;
+    color: var(--button-fill-primary);
+    line-height: unset;
+    font-family: 'trirong', serif;
+    font-weight: normal;
+    font-size: 28px;
+    font-style: normal;
+    text-overflow: unset;
+    text-wrap: nowrap;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.bookOnlineServicesBookType:hover {
+    color: rgba(195, 135, 135, 0.6);
+}
+
+.bookOnlineServicesContainer, #bookOnlineServicesEventForm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 80px 0 20px 0;
+}
+
+.bookOnlineServicesBack {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    font: var(--font-style-body-medium);
+    display: flex;
+    margin: 15px auto;
+    background-color: var(--fill-base-2);
+    border: none;
+    color: var(--fill-background-primary);
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bookOnlineServicesBack:hover {
+    background-color: rgba(66, 66, 60, 0.6);
+}
+
+.bookOnlineServicesHeader {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 50px;
+    line-height: 1.8em;
+    padding: 0;
+    margin: 0;
+    margin: 0 0 20px 0;
+}
+
+.bookOnlineServicesWarn {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    font-size: 12px;
+    line-height: 1.5em;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+#bookOnlineServiceTypes, #bookOnlineServiceList, #bookOnlineStylistList, #bookOnlineEventList, #bookOnlineGuestList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.bookOnlineServiceTypeItem, .bookOnlineServiceItem, .bookOnlineEventItem, .bookOnlineGuestItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    width: calc((100vw - 160px) / 4);
+    aspect-ratio: 1/1;
+    background-color: var(--fill-background-primary);
+    /* border-radius: 100px; */
+    box-shadow: 1.93px 2.30px 8px 0px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bookOnlineServiceTypeItem {
+    width: calc((100vw - 160px) / 6);
+}
+
+.bookOnlineServiceTypeItem:hover, .bookOnlineServiceItem:hover, .bookOnlineEventItem:hover, .bookOnlineGuestItem:hover {
+    /* background-color: rgba(244, 239, 235, 0.4); */
+    background-color: var(--fill-background-secondary);
+}
+
+.bookOnlineServiceTypeHeader, .bookOnlineEvenItemHeader, .bookOnlineGuestItemHeader {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bookOnlineServiceItemPrice, .bookOnlineServiceItemDesc, .bookOnlineEventItemTime, .bookOnlineEventItemDesc, .bookOnlineGuestItemDesc, .bookOnlineGuestItemPrice {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.bookOnlineStylistItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.bookOnlineStylistImageCon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6em;
+    width: calc((100vw - 160px) / 4);
+    aspect-ratio: 1/1;
+    background-color: var(--fill-accent-4);
+    border-radius: 50%;
+    box-shadow: 1.93px 2.30px 8px 0px rgba(0, 0, 0, 0.45);
+    transition: background-color 0.3s ease;
+}
+
+.bookOnlineStylistImageCon:hover {
+    background-color: rgba(112, 123, 109, 0.6);
+}
+
+.bookOnlineStylistImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fill-background-primary);
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    font-size: calc(100vw / 7);
+    transition: color 0.3s ease;
+}
+
+.bookOnlineStylistImageCon:hover .bookOnlineStylistImage {
+    color: rgba(66, 66, 60, 0.8);
+}
+
+.bookOnlineStylistImageOverlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    box-shadow: inset 0 0 20px 20px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    /* z-index: 110000; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bookOnlineStylistImageCon:hover .bookOnlineStylistImageOverlay {
+    opacity: 1;
+}
+
+.bookOnlineStylistHeader {
+    margin: 0;
+    text-decoration: none;
+    color: var(--button-fill-primary);
+    line-height: unset;
+    font-family: 'trirong', serif;
+    font-weight: normal;
+    font-size: 28px;
+    font-style: normal;
+    text-overflow: unset;
+    text-wrap: nowrap;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.bookOnlineStylistImageCon:hover + .bookOnlineStylistHeader {
+    color: rgba(195, 135, 135, 0.6);
+}
+
+#bookOnlineServicesStylistHeader {
+    margin: 0;
+    padding: 0;
+}
+
+#bookOnlineServicesStylistSubHeader {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: center;
+}
+
+#bookOnlineServicesStylistAvailable {
+    font-size: 24px;
+    color: var(--fill-accent);
+    /* transition: color 0.3s ease; */
+}
+
+#bookOnlineServicesStylistAvailable:hover {
+    color: rgba(195, 135, 135, 0.6);
+    cursor: pointer;
+}
+
+#bookOnlineServicesBooked {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bookOnlineServicesBookedHeader {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 50px;
+    line-height: 1.8em;
+    padding: 0;
+    margin: 0;
+    margin: 0 0 20px 0;
+}
+
+#bookOnlineServicesBookedSubHeader {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 1140px) {
+    #bookOnlineWelcomeForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bookOnlineReturningForm {
+        border-right: none;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--fill-base-2);
+    }
+
+    #bookOnlineNewForm {
+        padding-top: 40px;
+    }
+
+    #bookOnlineNewFormSpan {
+        display: flex;
+    }
+
+    #bookOnlineWelcomeNote {
+        width: 100%;
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 1126px) {
+    #bookOnlineServiceTypes, #bookOnlineServiceList {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .bookOnlineServiceTypeItem, .bookOnlineAddServiceItem {
+        width: auto;
+        height: auto;
+        min-width: 180px;
+        max-width: 250px;
+        aspect-ratio: 1;
+        flex: 1 0 0%;
+    }
+
+    .bookOnlineServiceItem {
+        width: auto;
+        height: auto;
+        min-width: 340px;
+        aspect-ratio: 1;
+        flex: 1 0 0%;
+    }
+}
+
+@media screen and (max-width: 1058px) {
+    #bookOnlineWelcome {
+        padding-top: 7vw;
+    }
+
+    #bookOnlineWelcome.bookOnlineClientNavHeader {
+        padding-top: 11vw;
+    }
+
+    #bookOnlineWelcome.bookOnlineMobileHeader {
+        padding-top: 0;
+    }
+
+    #bookOnlineServices.bookOnlineServicesSignedIn {
+        padding-top: 11vw;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .bookOnlineStylistItem {
+        flex: 1 0 0%;
+    }
+
+    .bookOnlineStylistImageCon {
+        min-width: 180px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #bookOnlineServicesBookTypeCon {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #bookOnlineReturningForm, #bookOnlineNewForm {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .bookOnlineFormInput {
+        width: 100%;
+    }
+}

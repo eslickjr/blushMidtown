@@ -1,0 +1,199 @@
+@keyframes bloom-in {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bloom-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+:root {
+    --facebook-color: #1877F2;
+    --instagram-color: #E4405F;
+
+    --color_0: 255,255,246;
+    --color_1: 32, 32, 32;
+    --color_2: 129, 110, 124;
+    --color_3: 54, 53, 53;
+    --color_4: 242, 242, 242;
+    --color_5: 227, 230, 229;
+    --color_6: 255, 255, 246;
+    --color_7: 196, 196, 196;
+    --color_8: 141, 141, 141;
+    --color_9: 87, 87, 87;
+    --color_10: 32, 32, 32;
+    --fill-background-primary: rgb(244, 239, 237);
+    --fill-background-secondary: rgb(200, 196, 193);
+    --text-secondary: rgb(111, 109, 104);
+    --text-primary: rgb(66, 66, 60);
+    --action: rgb(195, 135, 135);
+    --disabled: rgb(155, 153, 149);
+    --title: rgb(66, 66, 60);
+    --subtitle: rgb(66, 66, 60);
+    --line: rgb(111, 109, 104);
+    --custom-1: rgb(155, 153, 149);
+    --custom-2: rgb(213, 206, 212);
+    --custom-3: rgb(172, 157, 168);
+    --custom-4: rgb(86, 73, 83);
+    --custom-5: rgb(43, 37, 41);
+    --custom-6: rgb(112, 123, 109);
+    --custom-7: rgb(175, 174, 174);
+    --custom-8: rgb(135, 133, 133);
+    --custom-9: rgb(95, 93, 93);
+    --custom-10: rgb(54, 53, 53);
+    --custom-11: rgb(249, 249, 249);
+    --custom-12: rgb(242, 242, 242);
+    --custom-13: rgb(181, 181, 181);
+    --custom-14: rgb(121, 121, 121);
+    --custom-15: rgb(61, 61, 61);
+    --custom-16: rgb(241, 243, 242);
+    --custom-17: rgb(206, 165, 161);
+    --custom-18: rgb(167, 176, 173);
+    --custom-19: rgb(108, 121, 116);
+    --custom-20: rgb(54, 60, 58);
+    --fill-base-1: rgb(244, 239, 237);
+    --fill-base-2: rgb(66, 66, 60);
+    --fill-base-shade-1: rgb(200, 196, 193);
+    --fill-base-shade-2: var(--disabled);
+    --fill-base-shade-3: rgb(111, 109, 104);
+    --fill-accent: rgb(195, 135, 135);
+    --fill-accent-2: rgb(242, 242, 242);
+    --fill-accent-3: rgb(206, 165, 161);
+    --fill-accent-4: rgb(112, 123, 109);
+    --button-fill-primary: rgb(195, 135, 135);
+    --button-border-primary: rgb(195, 135, 135);
+    --button-text-primary: rgb(244, 239, 237);
+    --button-fill-primary-hover: rgb(244, 239, 237);
+    --button-border-primary-hover: rgb(195, 135, 135);
+    --button-text-primary-hover: rgb(195, 135, 135);
+    --button-fill-primary-disabled: rgb(155, 153, 149);
+    --button-border-primary-disabled: rgb(155, 153, 149);
+    --button-text-primary-disabled: rgb(244, 239, 237);
+    --button-fill-secondary: rgb(244, 239, 237);
+    --button-border-secondary: rgb(195, 135, 135);
+    --button-text-secondary: rgb(195, 135, 135);
+    --button-fill-secondary-hover: rgb(195, 135, 135);
+    --button-border-secondary-hover: rgb(195, 135, 135);
+    --button-text-secondary-hover: rgb(244, 239, 237);
+    --button-fill-secondary-disabled: rgb(244, 239, 237);
+    --button-border-secondary-disabled: rgb(155, 153, 149);
+    --button-text-secondary-disabled: rgb(155, 153, 149);
+    --font_0: normal normal normal 22px / 1.41em trirong, serif;
+    --font_1: normal normal normal 14px / 1.79em helvetica-w01-light, sans-serif;
+    --font-style-h2: normal normal normal 28px / 1.375em trirong, serif;
+    --font-style-h3: normal normal normal 88px / 1.2em trirong, serif;
+    --font-style-h4: normal normal normal 72px / 1.25em trirong, serif;
+    --font-style-h5: normal normal normal 50px / 1.34em trirong, serif;
+    --font-style-h6: normal normal normal 40px / 1.35em trirong, serif;
+    --font-style-body-large: normal normal normal 20px / 1.67em josefin-sans, 'josefin sans', sans-serif;
+    --font-style-body-medium: normal normal normal 18px / 1.75em josefin-sans, 'josefin sans', sans-serif;
+    --font-style-body-small: normal normal normal 15px / 1.875em josefin-sans, 'josefin sans', sans-serif;
+    --font-style-body-x-small: normal normal normal 14px / 1.79em helvetica-w01-light, sans-serif;
+    --wix-ads-height: 0px;
+    --sticky-offset: 0px;
+    --wix-ads-top-height: 0px;
+    --site-width: 980px;
+    --above-all-z-index: 100000;
+    --portals-z-index: 100001;
+    --wix-opt-in-direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --minViewportSize: 320;
+    --maxViewportSize: 1920;
+    --theme-spx-ratio: 1px;
+    --scaling-factor: min((100 * var(--one-unit)), var(--section-max-width));
+    --customScaleViewportLimit: clamp(var(--minViewportSize) * 1px, 100 * var(--one-unit), min(var(--section-max-width), var(--maxViewportSize) * 1px));
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg-first-color);
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+a {
+    margin: auto 10px;
+    color: black;
+}  
+
+p {
+    font-family: "Cactus Classical Serif", serif;
+    color: white;
+}
+
+h2, h3, h4 {
+    font-family: "Cal Sans", sans-serif;
+    letter-spacing: 2px;
+}
+
+/* input[type="button"] {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+} */
+
+.project-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--fill-background-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    .loading-screen {
+        opacity: 0;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+    .loading-screen {
+        opacity: 1;
+    }
+
+    .loading-screen.hidden {
+        animation: bloom-in 0.25s forwards;
+    }
+
+    .loading-screen.changeScreen {
+        animation: bloom-out 0.25s forwards;
+    }
+}
+
+.mx-3 {
+    width: 100%;
+    flex: 1;
+}

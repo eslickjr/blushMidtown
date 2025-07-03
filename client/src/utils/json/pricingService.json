@@ -1,0 +1,412 @@
+[
+    {
+        "level": "level1",
+        "service": "Balayage | Lived in Color",
+        "price": 250
+    },
+    {
+        "level": "level1",
+        "service": "Bleach and Tone",
+        "price": 175
+    },
+    {
+        "level": "level1",
+        "service": "Color Retouch",
+        "price": 120
+    },
+    {
+        "level": "level1",
+        "service": "Express Color",
+        "price": 85
+    },
+    {
+        "level": "level1",
+        "service": "Glaze, Haircut and Blowout",
+        "price": 120
+    },
+    {
+        "level": "level1",
+        "serivce": "Highlights",
+        "price": 185
+    },
+    {
+        "level": "level1",
+        "service": "Signature All-Over Color & Cut",
+        "price": 150
+    },
+    {
+        "level": "level1",
+        "service": "Extensions Luxury Blowout",
+        "price": 75
+    },
+    {
+        "level": "level1",
+        "service": "Extensions Removal",
+        "price": 10
+    },
+    {
+        "level": "level1",
+        "service": "Extensions 1 Row Move Up",
+        "price": 125
+    },
+    {
+        "level": "level1",
+        "service": "Extensions 2 Row Move Up",
+        "price": 250
+    },
+    {
+        "level": "level1",
+        "service": "Extensions 3 Row Move Up",
+        "price": 350
+    },
+    {
+        "level": "level1",
+        "service": "Extensions Consultation",
+        "price": 0
+    },
+    {
+        "level": "level1",
+        "service": "Bang Trim",
+        "price": 15
+    },
+    {
+        "level": "level1",
+        "service": "Beard Trim",
+        "price": 10
+    },
+    {
+        "level": "level1",
+        "service": "Kids Cut",
+        "price": 30
+    },
+    {
+        "level": "level1",
+        "service": "Men's Haircut",
+        "price": 30
+    },
+    {
+        "level": "level1",
+        "service": "Woman's Haircut",
+        "price": 65
+    },
+    {
+        "level": "level1",
+        "service": "Color Consultation",
+        "price": 0
+    },
+    {
+        "level": "level1",
+        "service": "Grey Transformation Consultation",
+        "price": 75
+    },
+    {
+        "level": "level1",
+        "service": "Grey Blending",
+        "price": 225
+    },
+    {
+        "level": "level1",
+        "service": "Brow, Lip, Chin Wax",
+        "price": 50
+    },
+    {
+        "level": "level1",
+        "service": "Arm Wax (bicep to wrist)",
+        "price": 50
+    },
+    {
+        "level": "level1",
+        "service": "Brow and Lip Wax",
+        "price": 30
+    },
+    {
+        "level": "level1",
+        "service": "Brow Tinting",
+        "price": 20
+    },
+    {
+        "level": "level1",
+        "service": "Brow Wax",
+        "price": 15
+    },
+    {
+        "level": "level1",
+        "service": "Brow Wax and Tint",
+        "price": 30
+    },
+    {
+        "level": "level1",
+        "service": "Chin Wax",
+        "price": 11
+    },
+    {
+        "level": "level1",
+        "service": "Keratin Smoothing Treatment",
+        "price": 300
+    },
+    {
+        "level": "level1",
+        "service": "Saphira Mineral DeFrizz Treatment",
+        "price": 300
+    },
+    {
+        "level": "level1",
+        "service": "Scalp Detox",
+        "price": 100
+    },
+    {
+        "level": "level1",
+        "service": "Scalp Detox Add On",
+        "price": 75
+    },
+    {
+        "level": "level1",
+        "service": "Scalp Exfoliation",
+        "price": 100
+    },
+    {
+        "level": "level1",
+        "service": "Scalp Exfoliation Add On",
+        "price": 55
+    },
+    {
+        "level": "level1",
+        "service": "Fairy Hair Tinsel Extensions",
+        "price": 5
+    },
+    {
+        "level": "level1",
+        "service": "Special Occasion Hairstyles",
+        "price": 75
+    },
+    {
+        "level": "level1",
+        "service": "Special Occasion Makeup",
+        "price": 75
+    },
+    {
+        "level": "level1",
+        "service": "Blowout",
+        "price": 55
+    },
+    {
+        "level": "level1",
+        "service": "Luxury Blowout",
+        "price": 75
+    },
+    {
+        "level": "level1",
+        "service": "Deep Conditioning Treatment",
+        "price": 25
+    },
+    {
+        "level": "level1",
+        "service": "K18 Add On",
+        "price": 0
+    },
+    {
+        "level": "level2",
+        "service": "Balayage | Lived in Color",
+        "price": 300
+    },
+    {
+        "level": "level2",
+        "service": "Bleach and Tone",
+        "price": 225
+    },
+    {
+        "level": "level2",
+        "service": "Color Retouch",
+        "price": 145
+    },
+    {
+        "level": "level2",
+        "service": "Express Color",
+        "price": 100
+    },
+    {
+        "level": "level2",
+        "service": "Glaze, Haircut and Blowout",
+        "price": 145
+    },
+    {
+        "level": "level2",
+        "serivce": "Highlights",
+        "price": 240
+    },
+    {
+        "level": "level2",
+        "service": "Signature All-Over Color & Cut",
+        "price": 180
+    },
+    {
+        "level": "level2",
+        "service": "Extensions Luxury Blowout",
+        "price": 75
+    },
+    {
+        "level": "level2",
+        "service": "Extensions Removal",
+        "price": 10
+    },
+    {
+        "level": "level2",
+        "service": "Extensions 1 Row Move Up",
+        "price": 125
+    },
+    {
+        "level": "level2",
+        "service": "Extensions 2 Row Move Up",
+        "price": 250
+    },
+    {
+        "level": "level2",
+        "service": "Extensions 3 Row Move Up",
+        "price": 350
+    },
+    {
+        "level": "level2",
+        "service": "Extensions Consultation",
+        "price": 0
+    },
+    {
+        "level": "level2",
+        "service": "Bang Trim",
+        "price": 25
+    },
+    {
+        "level": "level2",
+        "service": "Beard Trim",
+        "price": 10
+    },
+    {
+        "level": "level2",
+        "service": "Kids Cut",
+        "price": 30
+    },
+    {
+        "level": "level2",
+        "service": "Men's Haircut",
+        "price": 42
+    },
+    {
+        "level": "level2",
+        "service": "Woman's Haircut",
+        "price": 90
+    },
+    {
+        "level": "level2",
+        "service": "Color Consultation",
+        "price": 50
+    },
+    {
+        "level": "level2",
+        "service": "Grey Transformation Consultation",
+        "price": 75
+    },
+    {
+        "level": "level2",
+        "service": "Grey Blending",
+        "price": 300
+    },
+    {
+        "level": "level2",
+        "service": "Brow, Lip, Chin Wax",
+        "price": 50
+    },
+    {
+        "level": "level2",
+        "service": "Arm Wax (bicep to wrist)",
+        "price": 50
+    },
+    {
+        "level": "level2",
+        "service": "Brow and Lip Wax",
+        "price": 30
+    },
+    {
+        "level": "level2",
+        "service": "Brow Tinting",
+        "price": 20
+    },
+    {
+        "level": "level2",
+        "service": "Brow Wax",
+        "price": 15
+    },
+    {
+        "level": "level2",
+        "service": "Brow Wax and Tint",
+        "price": 30
+    },
+    {
+        "level": "level2",
+        "service": "Chin Wax",
+        "price": 20
+    },
+    {
+        "level": "level2",
+        "service": "Keratin Smoothing Treatment",
+        "price": 300
+    },
+    {
+        "level": "level2",
+        "service": "Saphira Mineral DeFrizz Treatment",
+        "price": 300
+    },
+    {
+        "level": "level2",
+        "service": "Scalp Detox",
+        "price": 100
+    },
+    {
+        "level": "level2",
+        "service": "Scalp Detox Add On",
+        "price": 75
+    },
+    {
+        "level": "level2",
+        "service": "Scalp Exfoliation",
+        "price": 120
+    },
+    {
+        "level": "level2",
+        "service": "Scalp Exfoliation Add On",
+        "price": 75
+    },
+    {
+        "level": "level2",
+        "service": "Fairy Hair Tinsel Extensions",
+        "price": 5
+    },
+    {
+        "level": "level2",
+        "service": "Special Occasion Hairstyles",
+        "price": 75
+    },
+    {
+        "level": "level2",
+        "service": "Special Occasion Makeup",
+        "price": 125
+    },
+    {
+        "level": "level2",
+        "service": "Blowout",
+        "price": 70
+    },
+    {
+        "level": "level2",
+        "service": "Luxury Blowout",
+        "price": 75
+    },
+    {
+        "level": "level2",
+        "service": "Deep Conditioning Treatment",
+        "price": 30
+    },
+    {
+        "level": "level2",
+        "service": "K18 Add On",
+        "price": 30
+    }
+]

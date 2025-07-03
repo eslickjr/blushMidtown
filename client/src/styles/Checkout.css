@@ -1,0 +1,334 @@
+#checkoutContainer {
+    position: relative;
+    width: 100%;
+}
+
+#checkoutSummaryWrapper {
+    background-color: var(--fill-accent);
+}
+
+#checkoutSummary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 40px 0;
+    width: 980px;
+    margin: 0 auto;
+}
+
+#checkoutTitle {
+    font: var(--font-style-h4);
+    color: var(--fill-base-1);
+    text-align: center;
+    width: 100%;
+    margin: 20px 0 0 0;
+    font-size: 52px;
+}
+
+#checkoutSubtitle {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#checkoutServiceWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--fill-background-primary);
+}
+
+#checkoutServiceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#checkoutServiceDate {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#checkoutStylist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    height: 100%;
+    padding: 3px;
+    background-color: var(--fill-accent-4);
+    flex-shrink: 1;
+    border-radius: 50%;
+}
+
+#checkoutStylistImage {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#checkoutService, .checkoutAddService {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid var(--fill-base-2);
+    padding: 20px;
+}
+
+.checkoutAddService {
+    border-top: none;
+}
+
+#checkoutServiceName, .checkoutAddServiceName, .checkoutServiceType, .checkoutServicePrice {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: left;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    width: 33%; /* Adjusted for stylist image width */
+}
+
+.checkoutServiceType {
+    text-align: center;
+}
+
+.checkoutServicePrice {
+    text-align: right;
+}
+
+#checkoutTotalContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid var(--fill-base-2);
+    padding: 20px 20px 0 20px;
+}
+
+#checkoutTotal {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: right;
+    font-size: 24px;
+    margin: 0 20px 0 0;
+}
+
+#checkoutTotalPrice {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: right;
+    font-size: 24px;
+    margin: 0;
+}
+
+#checkoutSurcharge {
+    font: var(--font-style-body-small);
+    color: var(--fill-base-1);
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+#checkoutSurchargeBold {
+    color: var(--text-primary)
+}
+
+#checkoutNoteWrapper {
+    background-color: var(--fill-background-primary);
+    padding: 20px 0;
+}
+
+#checkoutNoteContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 980px;
+    margin: 0 auto;
+}
+
+#checkoutNote {
+    font: var(--font-style-body-small);
+    margin: 4px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid var(--fill-base-2);
+    border-left: 1px solid transparent;
+    background-color: var(--fill-background-primary);
+    /* padding: 3px 20% 3px 3px; */
+    padding-inline-start: 30px;
+    padding-inline-end: 3px;
+    height: 52px;
+    width: 100%;
+    color: var(--fill-base-2);
+}
+
+#checkoutNote::placeholder {
+    color: var(--fill-base-2);
+}
+
+#checkoutNote:hover {
+    border: 1px solid var(--fill-base-2);
+}
+
+#noteSpan {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 12px;
+    padding: 0 10px;
+    margin: 0 0 20px 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+#checkoutCancellation {
+    background-color: var(--fill-accent-4);
+    padding: 20px 0 40px 0;
+}
+
+#checkoutCancellationContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 980px;
+    margin: 0 auto;
+}
+
+#checkoutCancellationCheckboxContainer {
+    position: relative;
+}
+
+#checkoutCancellationCheckbox {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    /* border: 3px solid var(--fill-accent-4); */
+    background-color: var(--fill-background-primary);
+    margin: 0 10px 0 0;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* #checkoutCancellationCheckbox:checked {
+    background-color: var(--fill-accent);
+} */
+
+#checkoutCancellationCheckbox::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(232, 195, 191);
+    opacity: 1;
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+/* #checkoutCancellationCheckbox:checked::before {
+    background-color: var(--fill-accent);
+    width: 32px;
+    height: 32px;
+} */
+
+#checkoutCancellationCheckboxCheck {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    fill: var(--fill-accent);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#checkoutCancellationCheckbox:checked + #checkoutCancellationCheckboxCheck {
+    opacity: 1;
+}
+
+#checkoutCancellationLabel {
+    font: var(--font-style-body-small);
+    color: var(--fill-base-1);
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.5em;
+    padding: 0 10px;
+    width: calc(100% - 46px); /* Adjusted for checkbox width and margin */
+}
+
+#checkoutCancellationList {
+    padding: 20px;
+    background-color: var(--fill-background-primary)
+}
+
+.checkoutCancellationListItem {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    padding: 0;
+    list-style-type: disc;
+}
+
+#checkoutButton {
+    font: var(--font-style-body-medium);
+    display: flex;
+    margin: 15px auto;
+    background-color: var(--button-fill-secondary);
+    border: none;
+    color: var(--button-text-secondary);
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkoutButton:hover {
+    background-color: var(--button-fill-secondary-hover);
+    color: var(--button-text-secondary-hover);
+}
+
+@media screen and (max-width: 1020px) {
+    #checkoutSummary, #checkoutCancellationContainer {
+        width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #checkoutServiceDate {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,98 @@
+@keyframes dropIn {
+    0% {
+        transform: translateY(-25%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#deleteCardModalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10003;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+#deleteCardModalWrapper.deleteCardModalOpen {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#deleteCardModal {
+    background-color: var(--fill-background-primary);
+    width: 400px;
+    padding: 20px;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.deleteCardModalOpen #deleteCardModal {
+    animation: dropIn 0.5s ease forwards;
+}
+
+#deleteCardHeader {
+    font: var(--font-style-h6);
+    color: var(--fill-accent-3);
+    margin: 0 0 20px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+}
+
+#deleteCardButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.deleteCardButton {
+    font: var(--font-style-body-medium);
+    display: flex;
+    margin: 15px auto;
+    border: none;
+    color: var(--fill-background-primary);
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0;
+}
+
+#deleteCardConfirm {
+    background-color: var(--fill-accent);
+}
+
+#deleteCardConfirm:hover {
+    background-color: rgba(195, 135, 135, 0.6);
+    cursor: pointer;
+}
+
+#deleteCardCancel {
+    background-color: var(--fill-accent-4);
+}
+
+#deleteCardCancel:hover {
+    background-color: rgba(112, 123, 109, 0.6);
+    cursor: pointer;
+}
+
+.deleteCardSVG {
+    width: 30px;
+    height: 30px;
+    fill: var(--fill-base-1)
+}
+

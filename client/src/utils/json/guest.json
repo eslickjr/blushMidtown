@@ -1,0 +1,43 @@
+[
+        {
+            "type": "All Over Color",
+            "priceBottom": 165,
+            "priceTop": 195
+        },
+        {
+            "type": "Balayage | Lived in Color",
+            "priceBottom": 275,
+            "priceTop": 325,
+            "desc": "Balayage is the perfect service for that \"sun kissed\" look. Includes cut and style. Lived in Color is perfect for some one who wants to have a soft lived in look with less maintenance.*Prices may vary depending on desired result"
+        },
+        {
+            "type": "Color Consultation",
+            "priceBottom": 50,
+            "priceTop": 75,
+            "desc": "Not sure what to book? No problem! A color consultation is the best way to sit down with your stylist to come up with the perfect cut and color designed just for you!"
+        },
+        {
+            "type": "Grey Blending Consultation",
+            "priceBottom": 50,
+            "priceTop": 75,
+            "desc": "This is perfect if you want to blend your grey gradually. Prices may vary. *Grey Blending Consultation is required before booking a Grey Blending session. * This is not a Grey Transformation appointment. Please book a GREY TRANSFORMATION consultation first."
+        },
+        {
+            "type": "Grey Transformation Consultation",
+            "priceBottom": 75,
+            "priceTop": 75,
+            "desc": "Tired of coloring your roots every 4-6 weeks? A grey transformation may be exactly what you are looking for! *A consultation is required. There is a non refundable deposit for the consultation."
+        },
+        {
+            "type": "Highlights",
+            "priceBottom": 225,
+            "priceTop": 275,
+            "desc": "Booking a new guest highlight will insure you and your stylist ample time for a thorough consultation to give you the new hair of your dreams"
+        },
+        {
+            "type": "Woman's Haircut",
+            "priceBottom": 75,
+            "priceTop": 100,
+            "desc": "This appointment is for new guests booking a woman's haircut. This allows your stylist extra time for consultations and to perfect your new style"
+        }
+    ]

@@ -1,0 +1,230 @@
+@keyframes slideAcross {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
+#workWithUsContainer {
+    background-color: var(--fill-background-primary);
+}
+
+.workWithUsSection {
+    background-color: var(--fill-background-primary);
+    padding-bottom: 20px;
+}
+
+#workWithUsSlider {
+    /* height: 472px; */
+    position: relative;
+    width: 1216px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden 
+}
+
+.workWithUsImageContainer {
+    /* height: 100%; */
+    width: calc(25% - 10px);
+    /* width: 24.18%; */
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateX(-50%);
+    margin: 0 5px;
+    overflow: hidden;
+}
+
+.workWithUsImageContainer.animating {
+    animation: slideAcross 0.5s ease-in-out forwards;
+}
+
+.workWithUsImage {
+    height: 100%;
+    
+    background-position: 50% center;
+}
+
+#workWithUsSummary * {
+    text-align: center;
+}
+
+#workWithUsHeader {
+    font: var(--font-style-h6);
+    color: var(--fill-accent);
+    margin: 0 auto 20px auto;
+    line-height: 1.35em;
+    font-size: 40px;
+}
+
+.workWithUsSpan {
+    font: var(--font-style-body-small);
+    line-height: 1.5em;
+    font-size: 18px;
+    color: var(--fill-accent);
+    font-weight: bold;
+}
+
+.workWithUsText {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    font-size: 18px;
+    line-height: 1.5em;
+    width: 980px;
+    margin: 20px auto;
+}
+
+#workWithUsFormWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* .workWithUsFormContainers {
+    flex: 1 0 auto;
+} */
+
+#workWithUsFormImageContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* flex: 1 0 auto; */
+    margin-left: 0;
+    padding: 0;
+}
+
+#workWithUsFormImage {
+    aspect-ratio: auto 490 / 596;
+}
+
+#workWithUsFormContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+    padding: 0;
+}
+
+#workWithUsForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 460px;
+    margin: 10px 0 10px clamp(0px, calc(max(0px, 50% - 460px) * 0.6), 9999px);
+}
+
+.workWithUsInput {
+    font: var(--font-style-body-small);
+    margin: 4px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid var(--fill-base-2);
+    border-left: 1px solid transparent;
+    background-color: var(--fill-background-primary);
+    /* padding: 3px 20% 3px 3px; */
+    padding-inline-start: 30px;
+    padding-inline-end: 3px;
+    height: 52px;
+    width: 460px;
+    color: var(--fill-base-2);
+}
+
+.workWithUsInput::placeholder {
+    color: var(--fill-base-2);
+}
+
+.workWithUsInput:hover {
+    border: 1px solid var(--fill-base-2);
+}
+
+#workWithUsTextArea {
+    height: 126px;
+    overflow-y: auto;
+    resize: none;
+}
+
+#workWithUsSubmit {
+    font: var(--font-style-body-medium);
+    display: flex;
+    margin: 15px auto;
+    background-color: var(--fill-base-2);
+    border: none;
+    color: var(--fill-background-primary);
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#workWithUsSubmit:hover {
+    background-color: rgba(66, 66, 60, 0.6);
+}
+
+@media screen and (max-width: 1256px) {
+    #workWithUsSlider {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1058px) {
+    #workWithUsSlider {
+        padding-top: 7vw;
+    }
+
+    #workWithUsSummary {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .workWithUsText {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 938px) {
+    #workWithUsFormWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #workWithUsFormImageContainer {
+        width: 80%;
+        aspect-ratio: 1 /.5;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .workWithUsImageContainer {
+        width: calc(33.33% - 10px);
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .workWithUsImageContainer {
+        width: calc(50% - 10px);
+    }
+
+    #workWithUsFormContainer {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .workWithUsInput {
+        width: 100%;
+    }
+}

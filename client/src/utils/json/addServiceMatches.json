@@ -1,0 +1,34 @@
+[
+    {
+        "addService": "Brow Wax & Tint",
+        "match": "Brow Wax"
+    },
+    {
+        "addService": "Brow Wax & Tint",
+        "match": "Brow Tinting"
+    },
+    {
+        "addService": "Brow Wax & Tint",
+        "match": "Brow and Lip Wax"
+    },
+    {
+        "addService": "Brow and Lip Wax",
+        "match": "Brow Wax"
+    },
+    {
+        "addService": "Brow and Lip Wax",
+        "match": "Brow Wax & Tint"
+    },
+    {
+        "addService": "Brow Wax",
+        "match": "Brow Wax & Tint"
+    },
+    {
+        "addService": "Brow Wax",
+        "match": "Brow and Lip Wax"
+    },
+    {
+        "addService": "Brow Tinting",
+        "match": "Brow Wax & Tint"
+    }
+]

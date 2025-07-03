@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Courtney",
+        "src": "../assets/staff/Courtney.avif",
+        "stylist": true,
+        "pricingLevelId": 1
+    },
+    {
+        "name": "Savannah",
+        "src": "../assets/staff/BigVan.avif",
+        "stylist": true,
+        "pricingLevelId": 1
+    },
+    {
+        "name": "Jen",
+        "src": "../assets/staff/Jen.avif",
+        "stylist": true,
+        "pricingLevelId": 2
+    },
+    {
+        "name": "Grace",
+        "src": "../assets/staff/Grace.avif",
+        "stylist": true,
+        "pricingLevelId": 1
+    },
+    {
+        "name": "Rachel",
+        "src": "../assets/staff/Rachel.avif",
+        "stylist": true,
+        "pricingLevelId": 1
+    },
+    {
+        "name": "Sydney",
+        "src": "../assets/staff/Sydney.avif",
+        "stylist": true,
+        "pricingLevelId": 1
+    },
+    {
+        "name": "Katie",
+        "src": "../assets/staff/Katie.avif",
+        "stylist": false,
+        "pricingLevelId": 0
+    }
+]

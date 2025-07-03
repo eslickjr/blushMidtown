@@ -1,0 +1,273 @@
+[    
+    {
+        "type": "Balayage | Lived in Color",
+        "priceBottom": 250,
+        "priceTop": 300,
+        "desc": "Balayage or Lived in Color is the perfect service for some one who wants to have a soft look with less maintenance. Includes cut and style. *Prices may vary depending on desired result",
+        "serviceType": "Color"
+    },
+    {
+        "type": "Bleach and Tone",
+        "priceBottom": 175,
+        "priceTop": 225,
+        "desc": "This service is for Blonde on the scalp lightening services with a toner",
+        "serviceType": "Color"
+    },
+    {
+        "type": "Color Retouch",
+        "priceBottom": 120,
+        "priceTop": 145,
+        "desc": "This service is perfect for grey coverage clients just needing to retouch those greys. It includes one color, a cut and style. **This is NOT a blonding service. *Prices may vary depending on desired result",
+        "serviceType": "Color"
+    },
+    {
+        "type": "Express Color",
+        "priceBottom": 85,
+        "priceTop": 100,
+        "desc": "In a hurry? Our Express color is perfect the quick root fix! No cut. No style. No fuss!",
+        "serviceType": "Color"
+    },
+    {
+        "type": "Glaze, Haircut and Blowout",
+        "priceBottom": 120,
+        "priceTop": 145,
+        "desc": "Glaze, haircut and blowout is perfect for giving your locks a refresh in between color appoints or to add lots of shine to dull hair. *Prices may vary depending on desired result",
+        "serviceType": "Color"
+    },
+    {
+        "type": "Highlights",
+        "priceBottom": 185,
+        "priceTop": 240,
+        "desc": "This service is perfect for your traditional highlight client. Prices are starting prices only and will vary depending on the desired look and time/ product used.",
+        "serviceType": "Color"
+    },
+    {
+        "type": "Signature All-Over Color & Cut",
+        "priceBottom": 150,
+        "priceTop": 180,
+        "desc": "Indulge in a luxury hair transformation with our Signature All-Over Color & Precision Cut—a premium service designed for those seeking a complete, seamless color refresh from root to tip. Whether you desire a bold new hue, grey coverage, or a revitalized tone with multi-dimensional shine, our expert colorists ensure a flawless, radiant result tailored to your unique style. Please note that additional costs may apply based on the desired result, as well as the length and density of your hair.",
+        "serviceType": "Color"
+    },
+    {
+        "type": "Extensions Luxury Blowout",
+        "priceBottom": 75,
+        "priceTop": 75,
+        "desc": "There is nothing like a fabulous blowout! Our signature Luxury Blowout is meant to not only make your life easier but pamper you as well. This service is the perfect add on for your extensions move up appointment",
+        "serviceType": "Extensions"
+    },
+    {
+        "type": "Extensions Removal",
+        "priceBottom": 10,
+        "priceTop": 10,
+        "desc": "Extensions removal $10 per row",
+        "serviceType": "Extensions"
+    },
+    {
+        "type": "Extensions 1 Row Move Up",
+        "priceBottom": 125,
+        "priceTop": 125,
+        "desc": "Keep your extensions flawless with our expert maintenance service. This includes removal, reinstall, shampoo, and a blow-dry for a refreshed, seamless look. As your hair grows, we carefully reposition extensions for comfort while protecting your hair’s health.",
+        "serviceType": "Extensions"
+    },
+    {
+        "type": "Extensions 2 Row Move Up",
+        "priceBottom": 250,
+        "priceTop": 250,
+        "desc": "Keep your extensions flawless with our expert maintenance service. This includes removal, reinstall, shampoo, and a blow-dry for a refreshed, seamless look. As your hair grows, we carefully reposition extensions for comfort while protecting your hair’s health.",
+        "serviceType": "Extensions"
+    },
+    {
+        "type": "Extensions 3 Row Move Up",
+        "priceBottom": 350,
+        "priceTop": 350,
+        "desc": "Keep your extensions flawless with our expert maintenance service. This includes removal, reinstall, shampoo, and a blow-dry for a refreshed, seamless look. As your hair grows, we carefully reposition extensions for comfort while protecting your hair’s health.",
+        "serviceType": "Extensions"
+    },
+    {
+        "type": "Extensions Consultation",
+        "priceBottom": 0,
+        "priceTop": 0,
+        "desc": "A consultation is required before your installation to ensure the perfect match for your hair goals. Our expert stylists will assess your hair type, texture, and desired look to curate a custom extension solution. We offer premium options, including seamless tape-ins and luxurious hand-tied wefts. You’ll receive a precise color match and a personalized care plan. Book your consultation today and take the first step toward the hair of your dreams.",
+        "serviceType": "Extensions"
+    },
+    {
+        "type": "Bang Trim",
+        "priceBottom": 15,
+        "priceTop": 25,
+        "serviceType": "Haircut"
+    },
+    {
+        "type": "Beard Trim",
+        "priceBottom": 10,
+        "priceTop": 10,
+        "serviceType": "Haircut"
+    },
+    {
+        "type": "Kids Cut",
+        "priceBottom": 30,
+        "priceTop": 30,
+        "desc": "Kids 10 and under. Does not include shampoo and style.",
+        "serviceType": "Haircut"
+    },
+    {
+        "type": "Men's Haircut",
+        "priceBottom": 30,
+        "priceTop": 42,
+        "serviceType": "Haircut"
+    },
+    {
+        "type": "Woman's Haircut",
+        "priceBottom": 65,
+        "priceTop": 90,
+        "serviceType": "Haircut"
+    },
+    {
+        "type": "Color Consultation",
+        "priceBottom": 0,
+        "priceTop": 50,
+        "desc": "Not sure what to book? No problem! A color consultation is the best way to sit down with your stylist to come up with the perfect cut and color designed just for you!",
+        "serviceType": "Consultation"
+    },
+    {
+        "type": "Grey Transformation Consultation",
+        "priceBottom": 75,
+        "priceTop": 75,
+        "desc": "Tired of coloring your roots every 4-6 weeks? A grey transformation may be exactly what you are looking for! *A consultation is required. There is a non refundable deposit for the consultation.",
+        "serviceType": "Consultation"
+    },
+    {
+        "type": "Grey Blending",
+        "priceBottom": 225,
+        "priceTop": 300,
+        "desc": "This is perfect if you want to blend your grey gradually. Prices may vary. *Grey Blending Consultation is required before booking a Grey Blending session. * This is not a Grey Transformation appointment. Please book a GREY TRANSFORMATION consultation first.",
+        "serviceType": "Grey Blending / Transitioning"
+    },
+    {
+        "type": "Brow, Lip, Chin Wax",
+        "priceBottom": 50,
+        "priceTop": 50,
+        "serviceType": "Waxing and Brow Tint"
+    },
+    {
+        "type": "Arm Wax (bicep to wrist)",
+        "priceBottom": 50,
+        "priceTop": 50,
+        "serviceType": "Waxing and Brow Tint"
+    },
+    {
+        "type": "Brow and Lip Wax",
+        "priceBottom": 30,
+        "priceTop": 30,
+        "serviceType": "Waxing and Brow Tint"
+    },
+    {
+        "type": "Brow Tinting",
+        "priceBottom": 20,
+        "priceTop": 20,
+        "serviceType": "Waxing and Brow Tint"
+    },
+    {
+        "type": "Brow Wax",
+        "priceBottom": 15,
+        "priceTop": 15,
+        "serviceType": "Waxing and Brow Tint"
+    },
+    {
+        "type": "Brow Wax and Tint",
+        "priceBottom": 30,
+        "priceTop": 30,
+        "serviceType": "Waxing and Brow Tint"
+    },
+    {
+        "type": "Chin Wax",
+        "priceBottom": 11,
+        "priceTop": 20,
+        "serviceType": "Waxing and Brow Tint"
+    },
+    {
+        "type": "Keratin Smoothing Treatment",
+        "priceBottom": 300,
+        "priceTop": 300,
+        "serviceType": "Hair Treatments"
+    },
+    {
+        "type": "Saphira Mineral DeFrizz Treatment",
+        "priceBottom": 300,
+        "priceTop": 300,
+        "desc": "Retain your natural texture while eliminating frizz, healing the hair and adding strength. With 4 key ingredients, this treatment will leave your hair unlike any other on the market. This mineral based DeFrizz technology is composed of 26 Dead Sea Minerals, Hyaluronic Acid, Diamond Powder, Lily Flower and Essential Oils. This technology, using hyaluronic acid, removes frizz, while maintaining the structural integrity and natural texture of the hair. Lasts up to 5 months",
+        "serviceType": "Hair Treatments"
+    },
+    {
+        "type": "Scalp Detox",
+        "priceBottom": 100,
+        "priceTop": 100,
+        "desc": "Give your scalp the treatment it deserves with this deep cleansing scalp Detox that includes a Malibu Head Lab XL treatment meant to remove build up from minerals and products, scalp massage, deep conditioning treatment, hot towel and expert blow out.",
+        "serviceType": "Scalp Treatments"
+    },
+    {
+        "type": "Scalp Detox Add On",
+        "priceBottom": 75,
+        "priceTop": 75,
+        "desc": "Give your scalp the treatment it deserves with this deep cleansing scalp Detox that includes a Malibu Head Lab XL treatment meant to remove build up from minerals and products, scalp massage, deep conditioning treatment, hot towel",
+        "serviceType": "Scalp Treatments"
+    },
+    {
+        "type": "Scalp Exfoliation",
+        "priceBottom": 100,
+        "priceTop": 120,
+        "desc": "Give your scalp the treatment it deserves with this deep cleansing scalp exfoliation that includes a deep scalp scrub, scalp massage, deep conditioning treatment, hot towel and expert blow out",
+        "serviceType": "Scalp Treatments"
+    },
+    {
+        "type": "Scalp Exfoliation Add On",
+        "priceBottom": 55,
+        "priceTop": 75,
+        "desc": "Give your scalp the treatment it deserves with this deep cleansing scalp exfoliation that includes a deep scalp scrub, scalp massage, deep conditioning treatment, hot towel",
+        "serviceType": "Scalp Treatments"
+    },
+    {
+        "type": "Fairy Hair Tinsel Extensions",
+        "priceBottom": 5,
+        "priceTop": 5,
+        "desc": "Want to add fun pops of color or glitter to your hair? Add Fairy Hair Tinsel Extensions to any hair service! They are $5 a bundle",
+        "serviceType": "Fairy Hair Tinsel Extensions"
+    },
+    {
+        "type": "Special Occasion Hairstyles",
+        "priceBottom": 75,
+        "priceTop": 75,
+        "serviceType": "Bridal and Special Occasion"
+    },
+    {
+        "type": "Special Occasion Makeup",
+        "priceBottom": 75,
+        "priceTop": 125,
+        "serviceType": "Bridal and Special Occasion"
+    },
+    {
+        "type": "Blowout",
+        "priceBottom": 55,
+        "priceTop": 70,
+        "desc": "Enjoy a scalp massage, hot towel and blowout. Does not include curling/flat iron",
+        "serviceType": "Blowout"
+    },
+    {
+        "type": "Luxury Blowout",
+        "priceBottom": 75,
+        "priceTop": 75,
+        "desc": "There is nothing like a fabulous blowout! Our signature Luxury Blowout is meant to not only make your life easier but pamper you as well. This service is the perfect if you would like curls, straightened with a flat iron or if you have extremely thick hair.",
+        "serviceType": "Blowout"
+    },
+    {
+        "type": "Deep Conditioning Treatment",
+        "priceBottom": 25,
+        "priceTop": 30,
+        "serviceType": "Treatment Add Ons"
+    },
+    {
+        "type": "K18 Add On",
+        "priceBottom": 0,
+        "priceTop": 30,
+        "serviceType": "Treatment Add Ons"
+    }
+]

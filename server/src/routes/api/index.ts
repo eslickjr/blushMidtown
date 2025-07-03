@@ -1,0 +1,20 @@
+import { Router } from 'express';
+import { addServiceRoutes } from './addService.js';
+import { appointmentRoutes } from './appointment.js';
+import { clientRoutes } from './client.js';
+import { paymentCardRoutes } from './paymentCard.js';
+import { pricingLevelRoutes } from './pricingLevel.js';
+import { serviceRoutes } from './service.js';
+import { serviceTypeRoutes } from './serviceType.js';
+import { stylistRoutes } from './stylist.js';
+
+const router = Router();
+router.use('/addService', addServiceRoutes);
+router.use('/appointment', appointmentRoutes);
+router.use('/client', clientRoutes);
+router.use('/paymentCard', paymentCardRoutes);
+router.use('/pricing', pricingLevelRoutes);
+router.use('/service', serviceRoutes);
+router.use('/serviceType', serviceTypeRoutes);
+router.use('/stylist', stylistRoutes);
+export {router as apiRoutes};

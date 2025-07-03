@@ -1,0 +1,182 @@
+@keyframes dropIn {
+    0% {
+        transform: translateY(-25%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#addCardModalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10003;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+#addCardModalWrapper.addCardModalOpen {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#addCardModal {
+    background-color: var(--fill-background-primary);
+    width: 400px;
+    padding: 20px;
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addCardModalOpen #addCardModal {
+    animation: dropIn 0.5s ease forwards;
+}
+
+#addCardHeader {
+    font: var(--font-style-h6);
+    color: var(--fill-accent);
+    margin: 0 0 20px 0;
+    width: 100%;
+    text-align: left;
+    font-size: 32px;
+}
+
+#addCardForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addCardInput {
+    font: var(--font-style-body-small);
+    margin: 4px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid var(--fill-base-2);
+    border-left: 1px solid transparent;
+    background-color: var(--fill-background-primary);
+    /* padding: 3px 20% 3px 3px; */
+    padding-inline-start: 30px;
+    padding-inline-end: 3px;
+    height: 52px;
+    width: 200px;
+    color: var(--fill-base-2);
+}
+
+.addCardInput:nth-last-child(2) {
+    margin-bottom: 20px;
+}
+
+.addCardInput::placeholder {
+    color: var(--fill-base-2);
+}
+
+.addCardInput:hover {
+    border: 1px solid var(--fill-base-2);
+}
+
+.addCardSpan {
+    font: var(--font-style-body-small);
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+#addCardMakePrimaryContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 200px;
+    margin: 20px 0;
+}
+
+#addCardMakePrimaryCheckboxContainer {
+    position: relative;
+}
+
+#addCardMakePrimaryCheckbox {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    /* border: 3px solid var(--fill-accent-4); */
+    background-color: white;
+    margin: 0 10px 0 0;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+#addCardMakePrimaryCheckbox::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(232, 195, 191);
+    opacity: 1;
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+#addCardMakePrimaryCheckboxCheck {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    fill: var(--fill-accent);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#addCardMakePrimaryCheckbox:checked + #addCardMakePrimaryCheckboxCheck {
+    opacity: 1;
+}
+
+#addCardMakePrimaryLabel {
+    font: var(--font-style-body-small);
+    font-size: 16px;
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    user-select: none;
+    text-wrap: wrap;
+}
+
+#addCardButton {
+    font: var(--font-style-body-medium);
+    display: flex;
+    margin: 15px auto;
+    background-color: var(--fill-base-2);
+    border: none;
+    color: var(--fill-background-primary);
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addCardButton:hover {
+    background-color: rgba(66, 66, 60, 0.6);
+}

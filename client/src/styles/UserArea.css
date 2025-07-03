@@ -1,0 +1,360 @@
+@keyframes trash {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-10px) rotate(45deg);
+    }
+    66% {
+        transform: translateY(-10px) rotate(-22.5deg);
+    }
+    100% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+}
+
+#clientNavBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: var(--text-primary);
+    padding: 0;
+    margin: 0;
+}
+
+.clientNavItem {
+    font: var(--font-style-body-small);
+    color: var(--fill-accent-3);
+    text-decoration: none;
+    padding: 5px 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.clientNavItemActive {
+    color: var(--fill-accent-2);
+}
+
+.clientNavItemInactive:hover {
+    color: var(--fill-accent);
+}
+
+.emailOptInContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 460px;
+    margin: 20px 0;
+}
+
+.emailOptInCheckboxContainer {
+    position: relative;
+}
+
+.emailOptInCheckbox {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    /* border: 3px solid var(--fill-accent-4); */
+    background-color: white;
+    margin: 0 10px 0 0;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.emailOptInCheckbox::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(232, 195, 191);
+    opacity: 1;
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.emailOptInCheckboxCheck {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    fill: var(--fill-accent);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.emailOptInCheckbox:checked + .emailOptInCheckboxCheck {
+    opacity: 1;
+}
+
+.emailOptInLabel {
+    font: var(--font-style-body-small);
+    font-size: 16px;
+    color: var(--fill-text-primary);
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    user-select: none;
+    text-wrap: wrap;
+}
+
+#bookOnlineAppointments {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    width: 980px;
+}
+
+#bookOnlineUpcomingAppointmentContainer, #bookOnlinePreviousAppointmentsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#bookOnlinePreviousAppointmentsList {
+    /* aspect-ratio: 1 / 0.8; */
+    aspect-ratio: 1 / 0.63;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.bookOnlineFormHeader {
+    font: var(--font-style-body-medium);
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.8em;
+    padding: 0;
+    margin: 0;
+}
+
+.bookOnlineFormInputContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0 20px;
+}
+
+.bookOnlineFormLabel {
+    font: var(--font-style-body-small);
+    color: var(--text-primary);
+    width: 100px;
+    margin-right: 0px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+#bookOnlineUpcomingAppointmentHeader {
+    margin-bottom: 20px;
+}
+
+.bookOnlineFormSubHeader {
+    font: var(--font-style-body-small);
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.bookOnlineAppointmentItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#bookOnlineUpcomingAppointment {
+    background-color: var(--fill-accent);
+}
+
+#bookOnlineUpcomingAppointment:hover {
+    background-color: rgba(195, 135, 135, 0.6);
+    cursor: pointer;
+}
+
+.bookOnlinePreviousAppointmentItem {
+    background-color: var(--fill-accent-4);
+}
+
+.bookOnlinePreviousAppointmentItem:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.bookOnlinePreviousAppointmentItem:hover {
+    background-color: rgba(112, 123, 109, 0.6);
+    cursor: pointer;
+}
+
+.bookOnlineAppointmentItemInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookOnlineAppointmentName, .bookOnlineAppointmentDate, .bookOnlineAppointmentWith {
+    font: var(--font-style-body-small);
+    color: var(--fill-base-1);
+    margin: 0;
+}
+
+.bookOnlineAppointmentWith {
+    margin: 0 20px;
+}
+
+.bookOnlineAppointmentStylistContainer {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.bookOnlineAppointmentItem:hover .bookOnlineAppointmentStylistContainer {
+    opacity: 0.6;
+}
+
+.bookOnlineAppointmentStylist {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--fill-background-secondary);
+    padding: 5px;
+}
+
+.bookOnlinePaymentMethodItemContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#bookOnlinePaymentMethods {
+    width: 980px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#bookOnlinePaymentMethodsList {
+    aspect-ratio: 1 / 0.75;
+    overflow-y: auto;
+}
+
+.bookOnlinePaymentMethodItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: var(--fill-accent);
+    transition: background-color 0.3s ease;
+    width: 250px;
+}
+
+.bookOnlinePaymentMethodItemContainer:nth-last-child(1) .bookOnlinePaymentMethodItem {
+    margin-bottom: 0;
+}
+
+.bookOnlinePaymentMethodItem:hover {
+    background-color: rgba(195, 135, 135, 0.6);
+    cursor: pointer;
+}
+
+.bookOnlinePaymentMethodPrimary {
+    background-color: var(--fill-accent-4);
+}
+
+.bookOnlinePaymentMethodPrimary:hover {
+    background-color: rgba(112, 123, 109, 0.6);
+    cursor: pointer;
+}
+
+.bookOnlinePaymentMethodPrimaryText {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font: var(--font-style-body-medium);
+    color: var(--fill-base-1);
+    margin: 0;
+}
+
+.bookOnlinePaymentMethodText {
+    font: var(--font-style-body-small);
+    color: var(--fill-base-1);
+    margin: 0;
+}
+
+.bookOnlinePaymentMethodRemove {
+    width: 30px;
+    height: 30px;
+    fill: var(--fill-accent);
+    transform: translateY(-10px) rotate(0deg);
+    transition: transform 0.5s ease, fill 0.3s ease;
+    margin: 0 20px;
+}
+
+.bookOnlinePaymentMethodRemove:hover {
+    /* animation: trash 1s linear forwards; */
+    transform: translateY(-10px) rotate(22.5deg);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 910px) {
+    #bookOnlineAppointments {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #emailOptInContainer {
+        width: 100%;
+    }
+}
+
+@media (pointer: coarse) {
+    #bookOnlinePreviousAppointmentsList, #bookOnlinePaymentMethodsList {
+        scrollbar-color: var(--fill-accent) var(--fill-accent-4);
+        scrollbar-width: thin;
+    }
+    #bookOnlinePreviousAppointmentsList::-webkit-scrollbar, #bookOnlinePaymentMethodsList::-webkit-scrollbar {
+        width: 8px;
+        background: var(--fill-accent-4);
+    }
+    #bookOnlinePreviousAppointmentsList::-webkit-scrollbar-thumb, #bookOnlinePaymentMethodsList::-webkit-scrollbar-thumb {
+        background: var(--fill-accent);
+        border-radius: 8px;
+    }
+}
