@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 import "../styles/PhotoGallery.css"; // Assuming you have a CSS file for styling
 
@@ -98,8 +99,12 @@ export default function PhotoGallery() {
 
     return (
         <section id="photoGallerySection">
+            <Helmet>
+                <title>Salon Photo Gallery | Blush Midtown Greenville</title>
+                <meta name="description" content="Browse our photo gallery showcasing stunning hair transformations, styles, and salon ambiance at Blush Midtown in Greenville." />
+            </Helmet>
             {photosEl()}
-            <Link id="photoGalleryLink" to="/bookOnline">SCHEDULE AN APPOINTMENT</Link>
+            <Link id="photoGalleryLink" to="/book-online">SCHEDULE AN APPOINTMENT</Link>
         </section>
     );
 }

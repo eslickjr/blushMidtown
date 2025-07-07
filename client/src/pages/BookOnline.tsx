@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
+// Import styles
 import "../styles/BookOnline.css";
 
 // Add this declaration to let TypeScript know about import.meta.glob
@@ -11,6 +13,9 @@ declare var importMeta: ImportMeta;
 
 const staffImages = (import.meta as any).glob("../assets/staff/*.avif", { eager: true });
 
+//////////////////////
+// API Imports      //
+//////////////////////
 import { getAllStylists } from "../utils/api/blush/stylist";
 import { getAllServiceTypes } from "utils/api/blush/serviceType";
 import { getAddServices } from "utils/api/blush/addService";
@@ -21,6 +26,9 @@ import staffData from "../utils/json/staff.json";
 // import serviceTypes from "../utils/json/serviceTypes.json";
 import { useStylists, useServiceTypes, useAddServices, useServices } from "../context/BookingDataContext";
 
+//////////////////////
+// Component Imports//
+//////////////////////
 import Calendar from "../components/Calendar";
 import Checkout from "../components/Checkout";
 import ServiceType from "../components/ServiceType";
@@ -30,6 +38,9 @@ import AdditionalService from "../components/AdditionalService";
 import Stylist from "../components/Stylist";
 import UserArea from "../components/UserArea";
 
+//////////////////////
+// Type Imports     //
+//////////////////////
 import AppointmentI from "types/appointment";
 import StylistI from "types/stylist";
 import ClientI from "types/client";
@@ -164,6 +175,10 @@ export default function BookOnline() {
 
     return (
         <main id="bookOnline">
+            <Helmet>
+                <title>Book Your Appointment Online | Blush Midtown Greenville</title>
+                <meta name="description" content="Easily book your hair salon appointment online at Blush Midtown in Greenville. Fast, simple scheduling for all services." />
+            </Helmet>
             <UserArea client={client} setClient={setClient} firstTime={firstTime} setFirstTime={setFirstTime} stylistData={stylistsData} bookType={bookType} clientNav={clientNav} setClientNav={setClientNav} rebook={rebook} serviceTypes={serviceTypesContext} />
             <section id="bookOnlineServices" className={`bookOnlineSection ${client && !clientNav ? "bookOnlineServicesSignedIn" : ""}`}>
                 {!bookType ? (
@@ -181,7 +196,7 @@ export default function BookOnline() {
                                 service !== -1 ? (
                                     addServicePass ? (
                                         stylist === -1 ? (
-                                            <Stylist setAddServicePass={setAddServicePass} setStylist={setStylist} stylistsData={stylistsData} />
+                                            <Stylist setAddServicePass={setAddServicePass} setStylist={setStylist} stylistsData={stylistsData} serviceDuration={serviceDuration}/>
                                         ) : (
                                             serviceDate === undefined ? (
                                                 <Calendar setStylist={setStylist} setServiceDate={setServiceDate} stylist={stylist} serviceDuration={serviceDuration}/>
@@ -200,7 +215,7 @@ export default function BookOnline() {
                             service ? (
                                 addServicePass ? (
                                     !stylist ? (
-                                        <Stylist setAddServicePass={setAddServicePass} setStylist={setStylist} stylistsData={stylistsData} />
+                                        <Stylist setAddServicePass={setAddServicePass} setStylist={setStylist} stylistsData={stylistsData} serviceDuration={serviceDuration}/>
                                     ) : (
                                         serviceDate === undefined ? (
                                             <Calendar setStylist={setStylist} setServiceDate={setServiceDate} stylist={stylist} serviceDuration={serviceDuration}/>

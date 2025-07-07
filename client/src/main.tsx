@@ -25,31 +25,31 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/BookOnline',
+        path: '/book-online',
         element: <BookOnline />,
       },
       {
-        path: '/ColorServices',
+        path: '/color-services',
         element: <ColorServices />,
       },
       {
-        path: '/MeetTheStaff',
+        path: '/meet-the-staff',
         element: <MeetTheStaff />,
       },
       {
-        path: '/PhotoGallery',
+        path: '/photo-gallery',
         element: <PhotoGallery />,
       },
       {
-        path: '/SalonPolicies',
+        path: '/salon-policies',
         element: <SalonPolicies />,
       },
       {
-        path: '/ServiceMenu',
+        path: '/service-menu',
         element: <ServiceMenu />,
       },
       {
-        path: '/WorkWithUs',
+        path: '/work-with-us',
         element: <WorkWithUs />,
       }
     ],

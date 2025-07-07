@@ -33,12 +33,12 @@ export default function Home() {
                     <div id="homeImageWrapper">
                         {/* <img id="homeImageLogo" src={landingImageLogo} alt="Home" /> */}
                         <div id="homeImage"/>
-                        <Link id="homeImageButton" to="/BookOnline">SCHEDULE AN APPOINTMENT</Link>
+                        <Link id="homeImageButton" to="/book-online">SCHEDULE AN APPOINTMENT</Link>
                     </div>
                 :
                     <div id="homeImage">
                         <img id="homeImageLogo" src={landingImageLogo} alt="Home" />
-                        <Link id="homeImageButton" to="/BookOnline">SCHEDULE AN APPOINTMENT</Link>
+                        <Link id="homeImageButton" to="/book-online">SCHEDULE AN APPOINTMENT</Link>
                     </div>
                 }
                 <div id="homeText">
@@ -145,7 +145,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div id="homeServicesLinkContainer">
-                    <Link id="homeServicesLink" to="/ServiceMenu">Salon Services & Pricing</Link>
+                    <Link id="homeServicesLink" to="/service-menu">Salon Services & Pricing</Link>
                 </div>
             </section>
             <section id="homeClientWords">

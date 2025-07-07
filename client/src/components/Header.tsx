@@ -125,27 +125,27 @@ export default function Header({ client, setClient, clientNav, handleClientNav, 
                   <div className="navbar-link">Home</div>
                 </li>
                 <li id="serviceMenuNavbarContainer" className="navbar-item">
-                  <div id="serviceMenuNavbar" className="navbar-link" onClick={() => reRoute("/ServiceMenu")}>Service Menu</div>
-                  {!mobile && <div id="colorServicesNavbar" className={`${navDropdown ? "navDropdown" : ""} ${showDropdown ? "showDropdown" : ""} `} onClick={() => reRoute("/ColorServices")}>Color Services</div>}
+                  <div id="serviceMenuNavbar" className="navbar-link" onClick={() => reRoute("/service-menu")}>Service Menu</div>
+                  {!mobile && <div id="colorServicesNavbar" className={`${navDropdown ? "navDropdown" : ""} ${showDropdown ? "showDropdown" : ""} `} onClick={() => reRoute("/color-services")}>Color Services</div>}
                 </li>
                 {mobile &&
-                  <li className="navbar-item" onClick={() => reRoute("/ColorServices")}>
+                  <li className="navbar-item" onClick={() => reRoute("/color-services")}>
                     <div className="navbar-link">Color Services</div>
                   </li>
                 }
-                <li className="navbar-item" onClick={() => reRoute("/MeetTheStaff")}>
+                <li className="navbar-item" onClick={() => reRoute("/meet-the-staff")}>
                   <div className="navbar-link">Meet the Staff</div>
                 </li>
-                <li className="navbar-item" onClick={() => reRoute("/PhotoGallery")}>
+                <li className="navbar-item" onClick={() => reRoute("/photo-gallery")}>
                   <div className="navbar-link">Photo Gallery</div>
                 </li>
-                <li className="navbar-item" onClick={() => reRoute("/BookOnline")}>
+                <li className="navbar-item" onClick={() => reRoute("/book-online")}>
                   <div className="navbar-link">Book Online</div>
                 </li>
-                <li className="navbar-item" onClick={() => reRoute("/WorkWithUs")}>
+                <li className="navbar-item" onClick={() => reRoute("/work-with-us")}>
                   <div className="navbar-link">Work with Us</div>
                 </li>
-                <li className="navbar-item" onClick={() => reRoute("/SalonPolicies")}>
+                <li className="navbar-item" onClick={() => reRoute("/salon-policies")}>
                   <div className="navbar-link">Salon Policies</div>
                 </li>
                 {mobile && <svg id="navCollapse" onClick={() => handleNavCollapse()} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">

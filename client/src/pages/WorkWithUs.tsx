@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
+import { Helmet } from "react-helmet-async";
 
 import "../styles/WorkWithUs.css";
 
@@ -78,6 +79,10 @@ export default function WorkWithUs() {
 
     return (
         <main id="workWithUsContainer">
+            <Helmet>
+                <title>Join Our Team | Career Opportunities at Blush Midtown Greenville</title>
+                <meta name="description" content="Interested in working at Blush Midtown? Learn about current job openings, career opportunities, and how to apply to join our talented team." />
+            </Helmet>
             {workSlider()}
             <section id="workWithUsSummary" className="workWithUsSection">
                 <h1 id="workWithUsHeader">Come Work with Us!</h1>

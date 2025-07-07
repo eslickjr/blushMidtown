@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 import "../styles/ColorServices.css";
 
@@ -72,6 +73,10 @@ export default function ColorServices() {
 
     return (
         <main>
+            <Helmet>
+                <title>Professional Hair Color Services | Blush Midtown Greenville</title>
+                <meta name="description" content="Discover expert hair color services including highlights, balayage, and full color at Blush Midtown salon in Greenville. Transform your look today!" />
+            </Helmet>
             <section id="colorServiceCarouselSection">
                 <div id="colorServiceCarouselWrapper">
                     <h1 id="colorServiceCarouselHeader">Best Hair Color Services in Greenville</h1>
@@ -109,7 +114,7 @@ export default function ColorServices() {
                             <h2 className="colorServiceItemHeader">Gray Blending</h2>
                             <span className="colorServiceItemSpan">*Color service includes a haircut</span>
                             <p className="colorServiceItemDesc firstP">Gray blending is the process of blending your current color with incoming grays so there is no line of demarcation. This hair coloring service gives your hair a natural look and is a great lower maintenance option for clients who don't want to get root retouches every 8 weeks. The cost of our gray blending services start at $225.​</p>
-                            <Link to="/bookOnline" className="colorServiceItemLink">BOOK NOW</Link>
+                            <Link to="/book-online" className="colorServiceItemLink">BOOK NOW</Link>
                         </li>
                         <li className="colorServiceItem">
                             <h2 className="colorServiceItemHeader">Grey Transformation</h2>
@@ -118,7 +123,7 @@ export default function ColorServices() {
                             <p className="colorServiceItemDesc firstP">Are you finally ready to say GOOD BYE to coloring your roots every 4 weeks? A Grey transformation might be a good fit for you. Our goal is to transition you to your natural grey hair in one visit. Our grey transformation service is a great option for clients who want to embrace their greys and switch from a more high maintenance root retouch so they no longer need to come into the salon every 4-6 weeks. Our grey transformation services range from $125-$150 an hour.​</p>
                             <li className="colorServiceItemDesc bulletDesc">You must book a free color consultation first with one of our Grey Transformation Specialists.</li>
                             <li className="colorServiceItemDesc bulletDesc">This hair coloring service can take up to 8 hours and is usually achieved in one or two sessions. It is maintained with a toner every 6-8 weeks and possible highlight touches as needed until the original color grows out and can be cut off.</li>
-                            <Link to="/bookOnline" className="colorServiceItemLink">BOOK NOW</Link>
+                            <Link to="/book-online" className="colorServiceItemLink">BOOK NOW</Link>
                         </li>
                         <li id="colorServiceItemBalayage" className="colorServiceItem">
                             <h2 className="colorServiceItemHeader">Balayage Services</h2>
@@ -128,7 +133,7 @@ export default function ColorServices() {
                                 <br /><br />
                                 Balayage can be done on blondes or brunettes. Clients with other hair colors should contact our hair salon about other hair color services that can be used to achieve your desired look.
                             </p>
-                            <Link to="/bookOnline" className="colorServiceItemLink">BOOK NOW</Link>
+                            <Link to="/book-online" className="colorServiceItemLink">BOOK NOW</Link>
                         </li>
                         <li id="colorServiceItemAllOverColor" className="colorServiceItem">
                             <h2 className="colorServiceItemHeader">All Over Color Services</h2>
@@ -138,33 +143,33 @@ export default function ColorServices() {
                                 <br /><br />
                                 This service is a great option for someone who wants to make an all over change to their hair color. However, it should be noted that all over color is not a lightening service and is usually not an option for someone looking to go a shade lighter than they already are. Our all over color starts at $150. The cost of this hair coloring service depends on your hair's length and density, as well as the desired look.
                             </p>
-                            <Link to="/bookOnline" className="colorServiceItemLink">BOOK NOW</Link>
+                            <Link to="/book-online" className="colorServiceItemLink">BOOK NOW</Link>
                         </li>
                         <li id="colorServiceItemExpress" className="colorServiceItem">
                             <h2 className="colorServiceItemHeader">Express Color</h2>
                             <p className="colorServiceItemDesc firstP">We know you’re busy, and we take that into account with our express color service. Express color is a root touch-up service for our existing clients, which makes it a great option for anyone who wants to touch up their roots without spending more than an hour in the salon. Express color services are $65.</p>
                             <li className="colorServiceItemDesc boldDesc">Because of the time constraints of this service, express color does not include a cut or style.</li>
-                            <Link to="/bookOnline" className="colorServiceItemLink">BOOK NOW</Link>
+                            <Link to="/book-online" className="colorServiceItemLink">BOOK NOW</Link>
                         </li>
                         <li id="colorServiceItemGlaze" className="colorServiceItem">
                             <h2 className="colorServiceItemHeader">Glaze Color Services</h2>
                             <span className="colorServiceItemSpan">*Color service includes a haircut</span>
                             <p className="colorServiceItemDesc firstP">Hair glaze is a non-permanent technique that can tone your color and add shine to your hair. This hair color treatment can also be a maintenance appointment for blondes, gray blending, or gray transformation clients. Glaze hair color treatments start at $90.</p>
-                            <Link to="/bookOnline" className="colorServiceItemLink">BOOK NOW</Link>
+                            <Link to="/book-online" className="colorServiceItemLink">BOOK NOW</Link>
                         </li>
                         <li id="colorServiceItemVivid" className="colorServiceItem">
                             <h2 className="colorServiceItemHeader">Vivid Color Services</h2>
                             <span className="colorServiceItemSpan">*Book a consultation first</span>
                             <p className="colorServiceItemDesc firstP">Vivid colors are perfect for a wild child, and we’re here for it! Bring us your inspiration or let us use our creativity to guide you. Our hair colorists know what it takes to achieve stunning bright hair color.</p>
                             <li className="colorServiceItemDesc bulletDesc">These sessions can look different for everyone depending on the desired look, so vivid color appointments can take anywhere from 4-10 hours depending on the color you want and the length and density of your hair. We require a free color consultation be booked first so we can assess your individual situation and discuss expectations, budget, and timing.</li>
-                            <Link to="/bookOnline" className="colorServiceItemLink">BOOK NOW</Link>
+                            <Link to="/book-online" className="colorServiceItemLink">BOOK NOW</Link>
                         </li>
                         <li id="colorServiceItemCorrective" className="colorServiceItem">
                             <h2 className="colorServiceItemHeader">Corrective Color Services</h2>
                             <span className="colorServiceItemSpan">*Book a consultation first</span>
                             <p className="colorServiceItemDesc firstP">Corrective color services repair any issues you may have from previous hair coloring experiences. Things happen, and we are here to help you get your hair back to where you want it to be. Let our hair coloring experts take you from “Oh my!” to “Oh WOW!” with skillful corrective color. Corrective color services start at $125 per hour.</p>
                             <li className="colorServiceItemDesc bulletDesc">Corrective color can be very tedious and time consuming, so expect anywhere from 4-10 hours depending on the project at hand. We require a free color consultation be booked first so we can assess your individual situation and discuss expectations, budget, and timing.</li>
-                            <Link to="/bookOnline" className="colorServiceItemLink">BOOK NOW</Link>
+                            <Link to="/book-online" className="colorServiceItemLink">BOOK NOW</Link>
                         </li>
                     </ul>
                 </div>

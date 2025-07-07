@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import { UserDataProvider } from './context/UserDataContext';
 import { BookingDataProvider } from './context/BookingDataContext';
 import ClientI from './types/client';
+import { HelmetProvider } from 'react-helmet-async';
 
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
@@ -48,7 +49,8 @@ function App() {
   }
 
   return (
-    <div className="project-app">
+    <HelmetProvider>
+      <div className="project-app">
         <div className={`loading-screen ${loaded ? 'hidden' : ''} ${loadOut ? 'changeScreen' : ''}`} />
         <Header client={client} setClient={setClient} clientNav={clientNav} handleClientNav={handleClientNav} bloomOut={bloomOut}/>
         <main className="mx-3">
@@ -60,7 +62,8 @@ function App() {
           </BookingDataProvider>
         </main>
         <Footer bloomOut={bloomOut}/>
-    </div>
+      </div>
+    </HelmetProvider>
   );
 }
 

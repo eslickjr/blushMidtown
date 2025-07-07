@@ -1,8 +1,13 @@
 import "../styles/SalonPolicies.css";
+import { Helmet } from "react-helmet-async";
 
 export default function SalonPolicies() {
     return (
         <main id="salonPolicies">
+            <Helmet>
+                <title>Salon Policies & Guidelines | Blush Midtown Greenville</title>
+                <meta name="description" content="Review Blush Midtown’s salon policies to ensure a smooth, enjoyable experience during your visit. Learn about appointments, cancellations, and more." />
+            </Helmet>
             <section id="cancellationPolicy" className="policySection">
                 <h1 id="cancelHeader" className="policyHeader">Cancellation Policy</h1>
                 <p id="cancelNotice" className="policyText policyBold">We understand that life happens and appointments sometimes must be canceled but we kindly request a 24 hour notice.</p>

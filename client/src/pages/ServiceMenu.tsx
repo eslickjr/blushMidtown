@@ -2,6 +2,7 @@
 
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 import "../styles/ServiceMenu.css"; // Assuming you have a CSS file for styling
 
@@ -30,6 +31,10 @@ export default function ServiceMenu() {
 
     return (
         <main id="serviceMenu">
+            <Helmet>
+                <title>Complete Service Menu | Blush Midtown Greenville</title>
+                <meta name="description" content="Explore the full range of hair and beauty services offered at Blush Midtown. From cuts and color to treatments, find what suits your style." />
+            </Helmet>
             <section id="serviceMenuWelcome">
                 <h1 id="serviceMenuWelcomeHeader">Service Menu</h1>
                 <h3 id="serviceMenuWelcomeText">Not sure what service to book? Click the link below and we will be happy to help!</h3>
@@ -44,7 +49,7 @@ export default function ServiceMenu() {
                         <div id="serviceMenuExtensionsInfo" className="serviceMenuInfo">
                             <div id="serviceMenuExtensionsHeaderCon" className="serviceMenuHeaderCon">
                                 <h2 id="serviceMenuExtensionsHeader" className="serviceMenuHeader">Hair Extension</h2>
-                                <Link id="serviceMenuExtensionsLink" className="serviceMenuLink" to="/bookOnline">BOOK NOW</Link>
+                                <Link id="serviceMenuExtensionsLink" className="serviceMenuLink" to="/book-online">BOOK NOW</Link>
                             </div>
                             <ul id="serviceMenuExtensionsList" className="serviceMenuList">
                                 <li className="serviceMenuExtensionsListItem serviceMenuListItem">$125 per row to install</li>
@@ -60,7 +65,7 @@ export default function ServiceMenu() {
                         <div id="serviceMenuHairCutsInfo" className="serviceMenuInfo">
                             <div id="serviceMenuHairCutsHeaderCon" className="serviceMenuHeaderCon">
                                 <h2 id="serviceMenuHairCutsHeader" className="serviceMenuHeader">Hair Cuts</h2>
-                                <Link id="serviceMenuHairCutsLink" className="serviceMenuLink" to="/bookOnline">BOOK NOW</Link>
+                                <Link id="serviceMenuHairCutsLink" className="serviceMenuLink" to="/book-online">BOOK NOW</Link>
                             </div>
                             <ul id="serviceMenuHairCutsList" className="serviceMenuList">
                                 <li className="serviceMenuHairCutsListItem serviceMenuListItem">Women's classic cut  $65+ includes wash, cut and style</li>
@@ -88,7 +93,7 @@ export default function ServiceMenu() {
                         <div id="serviceMenuColorInfo" className="serviceMenuInfo">
                             <div id="serviceMenuColorHeaderCon" className="serviceMenuHeaderCon">
                                 <h2 id="serviceMenuColorHeader" className="serviceMenuHeader">Color Services</h2>
-                                <Link id="serviceMenuColorLink" className="serviceMenuLink" to="/bookOnline">BOOK NOW</Link>
+                                <Link id="serviceMenuColorLink" className="serviceMenuLink" to="/book-online">BOOK NOW</Link>
                             </div>
                             <ul id="serviceMenuColorList" className="serviceMenuList">
                                 <strong className="serviceMenuColorListItem serviceMenuListItem serviceMenuStrongItem">
@@ -121,7 +126,7 @@ export default function ServiceMenu() {
                                     <strong>Price will vary depending on stylist and desired look</strong>
                                 </li>
                             </ul>
-                            <Link id="serviceMenuColorServicesLink" to="/ColorServices">Explore Color Services</Link>
+                            <Link id="serviceMenuColorServicesLink" to="/color-services">Explore Color Services</Link>
                         </div>
                     </div>
                 </div>
@@ -133,7 +138,7 @@ export default function ServiceMenu() {
                         <div id="serviceMenuLighteningInfo" className="serviceMenuInfo">
                             <div id="serviceMenuLighteningHeaderCon" className="serviceMenuHeaderCon">
                                 <h2 id="serviceMenuLighteningHeader" className="serviceMenuHeader">Lightening Services</h2>
-                                <Link id="serviceMenuLighteningLink" className="serviceMenuLink" to="/bookOnline">BOOK NOW</Link>
+                                <Link id="serviceMenuLighteningLink" className="serviceMenuLink" to="/book-online">BOOK NOW</Link>
                             </div>
                             <ul id="serviceMenuLighteningList" className="serviceMenuList">
                                 <li className="serviceMenuLighteningListItem serviceMenuListItem">Highlights  $185+</li>
@@ -154,7 +159,7 @@ export default function ServiceMenu() {
                         <div id="serviceMenuStylingInfo" className="serviceMenuInfo">
                             <div id="serviceMenuStylingHeaderCon" className="serviceMenuHeaderCon">
                                 <h2 id="serviceMenuStylingHeader" className="serviceMenuHeader">Styling Services</h2>
-                                <Link id="serviceMenuStylingLink" className="serviceMenuLink" to="/bookOnline">BOOK NOW</Link>
+                                <Link id="serviceMenuStylingLink" className="serviceMenuLink" to="/book-online">BOOK NOW</Link>
                             </div>
                             <ul id="serviceMenuStylingList" className="serviceMenuList">
                                 <li className="serviceMenuStylingListItem serviceMenuListItem">
@@ -178,7 +183,7 @@ export default function ServiceMenu() {
                                     {!mobile && <br />}
                                     Occasion Hair & Makeup
                                 </h2>
-                                <Link id="serviceMenuBridalLink" className="serviceMenuLink" to="/bookOnline">BOOK NOW</Link>
+                                <Link id="serviceMenuBridalLink" className="serviceMenuLink" to="/book-online">BOOK NOW</Link>
                             </div>
                             <ul id="serviceMenuBridalList" className="serviceMenuList">
                                 <li className="serviceMenuBridalListItem serviceMenuListItem">Bridal Consultation Free</li>
@@ -200,7 +205,7 @@ export default function ServiceMenu() {
                         <div id="serviceMenuWaxingInfo" className="serviceMenuInfo">
                             <div id="serviceMenuWaxingHeaderCon" className="serviceMenuHeaderCon">
                                 <h2 id="serviceMenuWaxingHeader" className="serviceMenuHeader">Waxing and Brow Tint</h2>
-                                <Link id="serviceMenuWaxingLink" className="serviceMenuLink" to="/bookOnline">BOOK NOW</Link>
+                                <Link id="serviceMenuWaxingLink" className="serviceMenuLink" to="/book-online">BOOK NOW</Link>
                             </div>
                             <ul id="serviceMenuWaxingList" className="serviceMenuList">
                                 <li className="serviceMenuWaxingListItem serviceMenuListItem">Brow, Lip and Chin Wax $50</li>
